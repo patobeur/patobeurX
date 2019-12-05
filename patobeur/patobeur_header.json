@@ -1,0 +1,214 @@
+{
+	"auteur": "Patobeur",
+	"date": "30/12/2019",
+	"time_stamp": "2019-12-01 03:28:12",
+	"dom": {
+		"blocs": {
+            "0": "checksum",
+            "1": "structure",
+            "2": "head",
+            "3": "body-start",
+            "4": "blocs",
+            "5": "rs",
+            "6": "footer",
+            "7": "end_js",
+            "8": "body-end"
+        }
+    },
+	"blocs": {
+		"blocs": {
+            "0": "checksum",
+            "1": "structure",
+            "2": "head",
+            "3": "body-start",
+            "4": "blocs",
+            "5": "rs",
+            "6": "footer",
+            "7": "end_js",
+            "8": "body-end"
+        }
+    },
+	"structure": {
+		"meta": {
+            "doctype": "<!DOCTYPE html>",
+            "lang": "<html lang=\"fr\">"
+        }
+    },
+	"end_js": {
+		"out": [
+			{
+				"tag": "script",
+				"type": "src",
+				"contentype": "js/jquery-3.4.1.min.js"
+			},
+			{
+				"tag": "script",
+				"type": "src",
+				"contentype": "js/bootstrap.bundle.min.js"
+			},
+			{
+				"tag": "script",
+				"type": "src",
+				"contentype": "js/devtools.js"
+			}
+		],
+		"in": [
+		]
+    },
+    "head": {
+		"meta": [{
+				"tag": "meta",
+				"type": "charset",
+				"contentype": "UTF-8"
+			},
+			{
+				"tag": "title",
+				"type": "title",
+				"contentype": "Ma formation au Cefim à tours (2019-2020)"
+            },
+            {
+				"tag": "meta",
+				"type": "name",
+				"contentype": "description",
+				"item": "content",
+				"contentitem": "Description de ma page"
+			},
+			{
+				"tag": "meta",
+				"type": "name",
+				"contentype": "viewport",
+				"item": "content",
+				"contentitem": "width=device-width, initial-scale=1.0"
+			},
+			{
+				"tag": "meta",
+				"type": "http-equiv",
+				"contentype": "X-UA-Compatible",
+				"item": "content",
+				"contentitem": "ie=edge"
+			},
+			{
+				"tag": "link",
+				"type": "rel",
+				"contentype": "stylesheet",
+				"item": "href",
+				"contentitem": "css/bootstrap.min.css"
+			},
+			{
+				"tag": "link",
+				"type": "rel",
+				"contentype": "stylesheet",
+				"item": "href",
+				"contentitem": "css/style.css"
+			},
+			{
+				"tag": "link",
+				"type": "rel",
+				"contentype": "stylesheet",
+				"item": "href",
+				"contentitem": "css/cover.css"
+			},
+			{
+				"tag": "link",
+				"type": "rel",
+				"contentype": "stylesheet",
+				"item": "href",
+				"contentitem": "css/mooks.css"
+			},
+			{
+				"tag": "link",
+				"type": "rel",
+				"contentype": "stylesheet",
+				"item": "href",
+				"contentitem": "css/exercices.css"
+			},
+			{
+				"tag": "link",
+				"type": "rel",
+				"contentype": "stylesheet",
+				"item": "href",
+				"contentitem": "css/cefim.css"
+			},
+			{
+				"tag": "link",
+				"type": "rel",
+				"contentype": "stylesheet",
+				"item": "href",
+				"contentitem": "css/competences.css"
+			},
+			{
+				"tag": "link",
+				"type": "rel",
+				"contentype": "stylesheet",
+				"item": "href",
+				"contentitem": "css/footer.css"
+			},
+			{
+				"tag": "link",
+				"type": "rel",
+				"contentype": "stylesheet",
+				"item": "href",
+				"contentitem": "css/404.css"
+			},
+			{
+				"tag": "link",
+				"type": "rel",
+				"contentype": "stylesheet",
+				"item": "href",
+				"contentitem": "css/surcharge.css"
+			}
+		]
+	},
+	"defaultpage":  [
+		"index"
+	],
+	"pages":  [
+		"index",
+		"ajax",
+		"ajax-elka",
+		"informations",
+		"404",
+		"default"
+	],
+	"ajax-elka": {
+        "js": [],
+        "css": [],
+        "blocs": [
+            "navigation",
+            "ajax-elka"
+        ]
+    },
+	"informations": {
+        "js": [],
+        "css": [],
+        "blocs": [
+            "navigation",
+            "informations"
+        ]
+    },	
+	"404": {
+        "js": [],
+        "css": ["css/404.css"],
+        "blocs": [
+            "navigation",
+            "404"
+        ]
+    },	
+	"ajax": {
+        "js": [],
+        "css": [],
+        "blocs": [
+            "navigation",
+            "ajax"
+        ]
+    },	
+	"default": {
+        "js": [],
+        "css": [],
+        "blocs": [
+            "navigation",
+            "404"
+        ]
+    },	
+    "checksum": "checkmefive"
+}
