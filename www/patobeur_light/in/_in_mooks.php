@@ -1,4 +1,3 @@
-            <!-- - - - - - - - - - - - - - - - - - - - - -->
             <!-- MOOKS -->
             <section id="coding" class="moocs">
                 <h2>MOOCS</h2>
@@ -43,4 +42,3 @@
                 </div>
             </section>
             <!-- END's MOOKS -->
-            <!-- - - - - - - - - - - - - - - - - - - - - -->

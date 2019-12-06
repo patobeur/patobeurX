@@ -35,23 +35,33 @@
 		}
 	},
 	"end_js": {
-		"out": [{
+		"out": [
+			{
+				"typeof": "src",
+				"nameof": "script",
 				"tag": "script",
-				"type": "src",
-				"contentype": "js/jquery-3.4.1.min.js"
+				"contentype": "js/jquery-3.4.1.min.js",
+				"item": "type",
+				"contentitem": "text/javascript"
 			},
 			{
+				"typeof": "src",
+				"nameof": "script",
 				"tag": "script",
-				"type": "src",
-				"contentype": "js/bootstrap.bundle.min.js"
+				"contentype": "js/bootstrap.bundle.min.js",
+				"item": "type",
+				"contentitem": "text/javascript"
 			},
 			{
+				"typeof": "src",
+				"nameof": "script",
 				"tag": "script",
-				"type": "src",
-				"contentype": "js/devtools.js"
+				"contentype": "js/devtools.js",
+				"item": "type",
+				"contentitem": "text/javascript"
 			}
 		],
-		"in": []
+		"in": [{}]
 	},
 	"head": {
 		"meta": [{
@@ -194,11 +204,12 @@
 		]
 	},
 	"touitter": {
-		"js": [],
+		"js": ["js/touitter.js"],
 		"css": ["css/touitter.css"],
 		"blocs": [
 			"navigation",
-			"touitter"
+			"touitter",
+			"touit_info"
 		]
 	},
 	"ajaxelka": {

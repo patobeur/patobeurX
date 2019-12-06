@@ -222,13 +222,5 @@
                     </article>
                 </div>
             </section>
-            <!-- - - - - - - - - - - - - - - - - - - -  -->
-            <script src="adds/javascript/js/constantes.js" type="text/javascript"></script>
-            <script src="adds/javascript/js/moneychange.js" type="text/javascript"></script>
-            <script src="adds/javascript/js/perimetre.js" type="text/javascript"></script>
-            <script src="adds/javascript/js/temperature.js" type="text/javascript"></script>
-            <script src="adds/javascript/js/serialcheck.js" type="text/javascript"></script>
-            <script src="adds/javascript/js/boireoucoder.js" type="text/javascript"></script>
-            <script src="adds/javascript/js/triangles.js" type="text/javascript"></script>
             <!-- END's EXERCICES -->
             <!-- - - - - - - - - - - - - - - - - - - - - -->

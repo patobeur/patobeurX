@@ -13,6 +13,5 @@
                         </div>
                     </div>
                 </div>
-                <script></script>
             </div>
             <!-- END-COVER -->
