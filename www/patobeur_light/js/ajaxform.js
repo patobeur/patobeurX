@@ -11,7 +11,7 @@ function Init() {
 
         if (query.login != "" || query.pwd != ""){
             console.log("-" + JSON.stringify(query));
-            getAjax("../../patobeur/ajaxform.php", JSON.stringify(query), function (data) {
+            getAjax("ink/ajaxform.php", JSON.stringify(query), function (data) {
                 Response(data);
             });
         }else{
