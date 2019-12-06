@@ -101,8 +101,9 @@
                             </select>
                             <p id="LAPerimdom"></p>
                             <p id="mesresultats"></p>
+                        </div>
                     </article>
-                    <!-- ------------------------------------- -->
+                    <!-- - - - - - - - - - - - - - - - - - - -  -->
                     <article class="fiche perimetre" href="#">
                         <div class="annonces">
                             <h3>Un calculateur de périmètre</h3>
@@ -112,28 +113,18 @@
                             <p id="dernierperimetre"></p>
                         </div>
                     </article>
+                    <!-- - - - - - - - - - - - - - - - - - - -  -->
                     <article class="fiche kelvin" href="#">
                         <div class="annonces">
                             <h3>Kelvin, Farenheit, celsius</h3>
-                            <p>Calculer des températures.<br\>[C = (F-32)/1,8000] 
-                                [F = (C * 1,8) + 32]<br\>[K = ((F - 32) /1,8) + 273.15] 
+                            <p>Calculer des températures.<br/>[C = (F-32)/1,8000] 
+                                [F = (C * 1,8) + 32]<br/>[K = ((F - 32) /1,8) + 273.15] 
                                 [C = K - 273.15]</p>
                             <button onclick="temperature()" class="starter">Calculer</button>
                             <p id="dernieretemerature"></p>
                         </div>
                     </article>
-                    <!-- <article class="fiche serial" href="#">
-                        <div class="annonces">
-                            <h3>Invalid Serial Number 2</h3>
-                            <p>Renseignez un numéro de serie !</p>
-                                <label class="label1" for="champs1">Euros</label>
-                                <input id="champs1" type="text" class="input_1" placeholder="">
-
-                                <label class="label2" for="champs2">En dollars</label>
-                                <input id="champs2" type="text" class="input_2" placeholder=""> 
-                            <button class="starter">Check Serial</button>
-                        </div>
-                    </article> -->
+                    <!-- - - - - - - - - - - - - - - - - - - -  -->
                     <article class="fiche serial" href="#">
                         <div class="annonces">
                             <h3>Invalid Serial Number !</h3>
@@ -141,75 +132,88 @@
                             <button onclick="serialcheck()" class="starter">Check Serial</button>
                         </div>
                     </article>
+                    <!-- - - - - - - - - - - - - - - - - - - -  -->
                     <article class="fiche afaire" href="#">
                         <div class="annonces">
                             <h3>A FAIRE</h3>
                             <p>Les bases algorithmiques</p>
                         </div>
                     </article>
+                    <!-- - - - - - - - - - - - - - - - - - - -  -->
                     <article class="fiche afaire" href="#">
                         <div class="annonces">
                             <h3>Fonction - Factorielle</h3>
                             <p>source : <a href="https://campus.cefim.eu/mod/assign/view.php?id=8940">Cefim</a></p>
                         </div>
                     </article>
+                    <!-- - - - - - - - - - - - - - - - - - - -  -->
                     <article class="fiche afaire" href="#">
                         <div class="annonces">
                             <h3>Tableau - Au score !</h3>
                             <p>source : <a href="https://campus.cefim.eu/mod/assign/view.php?id=8942">Cefim</a></p>
                         </div>
                     </article>
+                    <!-- - - - - - - - - - - - - - - - - - - -  -->
                     <article class="fiche afaire" href="#">
                         <div class="annonces">
                             <h3>Tableau - Une nouvelle dimension</h3>
                             <p>source : <a href="https://campus.cefim.eu/mod/assign/view.php?id=8943">Cefim</a></p>
                         </div>
                     </article>
+                    <!-- - - - - - - - - - - - - - - - - - - -  -->
                     <article class="fiche afaire" href="#">
                         <div class="annonces">
                             <h3>Objets littéraux - Mon équipe de dev</h3>
                             <p>source : <a href="https://campus.cefim.eu/mod/assign/view.php?id=8944">Cefim</a></p>
                         </div>
                     </article>
+                    <!-- - - - - - - - - - - - - - - - - - - -  -->
                     <article class="fiche afaire" href="#">
                         <div class="annonces">
                             <h3>Exercices d'entrainement</h3>
                             <p>source : <a href="https://campus.cefim.eu/mod/page/view.php?id=9302">Cefim</a></p>
                         </div>
                     </article>
+                    <!-- - - - - - - - - - - - - - - - - - - -  -->
                     <article class="fiche afaire" href="#">
                         <div class="annonces">
                             <h3>Fonction - Factorielle</h3>
                             <p>source : <a href="https://campus.cefim.eu/mod/assign/view.php?id=8940">Cefim</a></p>
                         </div>
                     </article>
+                    <!-- - - - - - - - - - - - - - - - - - - -  -->
                     <article class="fiche afaire" href="#">
                         <div class="annonces">
                             <h3>A FAIRE</h3>
-                            <p>La manipulation du DOM</a></p>
+                            <p>La manipulation du DOM</p>
                         </div>
                     </article>
+                    <!-- - - - - - - - - - - - - - - - - - - -  -->
                     <article class="fiche afaire" href="#">
                         <div class="annonces">
                             <h3>Modification - Retour en arrière</h3>
                         </div>
                     </article>
+                    <!-- - - - - - - - - - - - - - - - - - - -  -->
                     <article class="fiche afaire" href="#">
                         <div class="annonces">
                             <h3>Ajout - Bloc Note (Part. 1)</h3>
                         </div>
                     </article>
+                    <!-- - - - - - - - - - - - - - - - - - - -  -->
                     <article class="fiche afaire" href="#">
                         <div class="annonces">
                             <h3>Suppression - Bloc Note (Part. 2)</h3>
                         </div>
                     </article>
+                    <!-- - - - - - - - - - - - - - - - - - - -  -->
                     <article class="fiche afaire" href="#">
                         <div class="annonces">
                             <h3>Atelier</h3>
                             <p>Insertion, Drag & Drop - Bloc Note (Part. 3)</p>
                         </div>
                     </article>
+                    <!-- - - - - - - - - - - - - - - - - - - -  -->
                     <article class="fiche afaire" href="#">
                         <div class="annonces">
                             <h3>Projet fil-rouge</h3>
@@ -218,6 +222,7 @@
                     </article>
                 </div>
             </section>
+            <!-- - - - - - - - - - - - - - - - - - - -  -->
             <script src="adds/javascript/js/constantes.js" type="text/javascript"></script>
             <script src="adds/javascript/js/moneychange.js" type="text/javascript"></script>
             <script src="adds/javascript/js/perimetre.js" type="text/javascript"></script>

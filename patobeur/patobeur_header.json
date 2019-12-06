@@ -70,7 +70,6 @@
 				"typeof": "name",
 				"nameof": "name",
 				"tag": "meta",
-				"type": "",
 				"contentype": "description",
 				"item": "content",
 				"contentitem": "Description de ma page"
@@ -78,7 +77,6 @@
 			{
 				"typeof": "name",
 				"tag": "meta",
-				"type": "",
 				"contentype": "viewport",
 				"item": "content",
 				"contentitem": "width=device-width, initial-scale=1.0"
@@ -100,23 +98,6 @@
 			{
 				"typeof": "rel",
 				"tag": "link",
-				"type": "rel",
-				"contentype": "stylesheet",
-				"item": "href",
-				"contentitem": "css/touitter.css"
-			},
-			{
-				"typeof": "rel",
-				"tag": "link",
-				"type": "rel",
-				"contentype": "stylesheet",
-				"item": "href",
-				"contentitem": "css/ajaxelka.css"
-			},
-			{
-				"typeof": "rel",
-				"tag": "link",
-				"type": "rel",
 				"contentype": "stylesheet",
 				"item": "href",
 				"contentitem": "css/style.css"
@@ -124,7 +105,6 @@
 			{
 				"typeof": "rel",
 				"tag": "link",
-				"type": "rel",
 				"contentype": "stylesheet",
 				"item": "href",
 				"contentitem": "css/cover.css"
@@ -132,7 +112,6 @@
 			{
 				"typeof": "rel",
 				"tag": "link",
-				"type": "rel",
 				"contentype": "stylesheet",
 				"item": "href",
 				"contentitem": "css/mooks.css"
@@ -140,7 +119,6 @@
 			{
 				"typeof": "rel",
 				"tag": "link",
-				"type": "rel",
 				"contentype": "stylesheet",
 				"item": "href",
 				"contentitem": "css/exercices.css"
@@ -148,7 +126,6 @@
 			{
 				"typeof": "rel",
 				"tag": "link",
-				"type": "rel",
 				"contentype": "stylesheet",
 				"item": "href",
 				"contentitem": "css/cefim.css"
@@ -156,7 +133,6 @@
 			{
 				"typeof": "rel",
 				"tag": "link",
-				"type": "rel",
 				"contentype": "stylesheet",
 				"item": "href",
 				"contentitem": "css/competences.css"
@@ -164,7 +140,6 @@
 			{
 				"typeof": "rel",
 				"tag": "link",
-				"type": "rel",
 				"contentype": "stylesheet",
 				"item": "href",
 				"contentitem": "css/footer.css"
@@ -172,15 +147,6 @@
 			{
 				"typeof": "rel",
 				"tag": "link",
-				"type": "rel",
-				"contentype": "stylesheet",
-				"item": "href",
-				"contentitem": "css/404.css"
-			},
-			{
-				"typeof": "rel",
-				"tag": "link",
-				"type": "rel",
 				"contentype": "stylesheet",
 				"item": "href",
 				"contentitem": "css/surcharge.css"
@@ -209,8 +175,16 @@
 		"default"
 	],
 	"index": {
-		"js": [],
-		"css": ["css/ajaxelka.css"],
+		"js": [
+			"js/constantes.js",
+			"js/moneychange.js",
+			"js/perimetre.js",
+			"js/temperature.js",
+			"js/serialcheck.js",
+			"js/boireoucoder.js",
+			"js/triangles.js"
+		],
+		"css": [],
 		"blocs": [
 			"navigation",
 			"landing",

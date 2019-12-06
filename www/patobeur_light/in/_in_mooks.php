@@ -40,6 +40,7 @@
                             <a href="https://global-exam.com/blog/fr/toefl-toeic-comment-choisir/" target="moocs_4" class="source">Quel test d’anglais est le plus adapté ?</a>
                         </div>
                     </article>
+                </div>
             </section>
             <!-- END's MOOKS -->
             <!-- - - - - - - - - - - - - - - - - - - - - -->
