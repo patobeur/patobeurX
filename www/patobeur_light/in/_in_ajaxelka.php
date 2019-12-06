@@ -1,4 +1,3 @@
-
             <!-- COVER -->
             <div class="elkacontainer outlined">
                 <div id="finish" class="formulaire-contact shadows outlined">

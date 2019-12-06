@@ -82,6 +82,9 @@
 .triangle,.boisson, .euros, .dollar, .perimetre, .kelvin, .serial {
   background-image: url('../img/javascript.png');
 }
+.ajax {
+  background-image: url('../img/ajax.png');
+}
 .afaire, .encours {
   background-image: url('../img/javascript.jpg');
 }

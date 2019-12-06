@@ -1,4 +1,3 @@
-
             <!-- - - - - - - - - - - - - - - - - - - - - -->
             <!-- EXERCICES -->
             <section id="coding" class="exercices">

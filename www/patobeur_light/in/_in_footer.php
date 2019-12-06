@@ -1,10 +1,7 @@
-
             <!-- - - - - - - - - - - - - - - - - - - - - -->
             <footer>
                 <div class="container">
-                    
                     <div class="social">
-                        
                         <span class="credit">
                             Parcour de formation developpeur web et web mobile
                         </span>
@@ -15,9 +12,7 @@
                         <span class="credit">
                             <a href="#">TOP</a>
                         </span>
-
                     </div>
-
                 </div>
             </footer>
             <!-- - - - - - - - - - - - - - - - - - - - - -->

@@ -1,4 +1,3 @@
-
             <!-- COVER -->
             <section class="heroman">
                 <h1>

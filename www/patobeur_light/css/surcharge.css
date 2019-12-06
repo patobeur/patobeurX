@@ -32,6 +32,9 @@
     margin-left: auto;
     max-width: 100%
 }
+
+
+
 @media (max-width:700px) {
     .fixed-top{position:relative;top:0;right:0;left:0;z-index:1030}
 }

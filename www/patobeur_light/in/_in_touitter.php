@@ -1,4 +1,3 @@
-
             <!-- COVER -->
             <div class="touitter">
                 <div id="touitters" class="shadows outlined">
