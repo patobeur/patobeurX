@@ -40,8 +40,10 @@
                                         aria-haspopup="true"
                                         aria-expanded="false">Compétences</a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="?ajax">Ajax</a>
-                                        <a class="dropdown-item" href="?informations">informations</a>
+                                        <a class="dropdown-item good" href="?ajax">Ajax</a>
+                                        <a class="dropdown-item good" href="?ajaxelka">Ajax Elka</a>
+                                        <a class="dropdown-item" href="?informations">Informations</a>
+                                        <a class="dropdown-item" href="?touitter">Touiiter</a>
                                         <div class="dropdown-divider">A venir</div>
                                         <a class="dropdown-item" href="#">SCSS / SASS</a>
                                         <a class="dropdown-item" href="#">Javascript</a>

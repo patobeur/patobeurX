@@ -13,13 +13,13 @@
         
         $Posted = parse_url($_SERVER['REQUEST_URI'], PHP_URL_QUERY);
         // ----------------- A SECURISER DE FOU ! -----------------
-        $defaultpage = $objet['defaultpage'][0];   // page par default
-        $pagesacceptees = $objet['pages'];   // les pages sont dans le json a la section pages et en dessous
+        $defaultpage = $objet['defaultpage'][0];                        // page par default
+        $pagesacceptees = $objet['pages'];                              // les pages sont dans le json a la section pages et en dessous
         // -------------------- ici un peu le bordel mais je tricotte là ------------------------------------
-        for ($i=0; $i < count($objet['pages']); $i++){              // on prend la liste des page existante dans le json
-            if (preg_match("'".$objet['pages'][$i]."'",$Posted)){   // la page est elle dans l'url ??
-                $defaultpage = $pagesacceptees[$i];                         // si oui on prend le nom dans $what 
-                // break;                                              // on stop ou pas 
+        for ($i=0; $i < count($objet['pages']); $i++){                  // on prend la liste des page existante dans le json
+            if (preg_match("'".$objet['pages'][$i]."'",$Posted)){       // la page est elle dans l'url ??
+                $defaultpage = $pagesacceptees[$i];                     // si oui on prend le nom dans $what 
+                // break;                                               // on stop ou pas 
             }
         }
 
@@ -59,7 +59,12 @@
         // $bloc .= file_get_contents($rootpassif.'navigation.php',TRUE); // ici on integre la navigation 
         // -------------------------------------- 
         // generation des pages a integrer dans le body en dessous de navigation mais en dessus du footer
-        for ($nbfichier = 0; $nbfichier < count($objet[$defaultpage]['blocs']); $nbfichier++){
+
+        // BUGG ICI BUGG ICI BUGG ICI BUGG ICI BUGG ICI BUGG ICI BUGG ICI 
+        // BUGG ICI BUGG ICI BUGG ICI BUGG ICI BUGG ICI BUGG ICI BUGG ICI 
+        // BUGG ICI BUGG ICI BUGG ICI BUGG ICI BUGG ICI BUGG ICI BUGG ICI 
+        $tempovalue = count($objet[$defaultpage]['blocs']);
+        for ($nbfichier = 0; $nbfichier < $tempovalue; $nbfichier++){
             $bloc .= file_get_contents($rootpassif.$objet[$defaultpage]['blocs'][$nbfichier].$pageextension,TRUE);
         }
         // ----------------- A SECURISER DE FOU ! -----------------

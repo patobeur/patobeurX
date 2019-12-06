@@ -99,6 +99,20 @@
 				"type": "rel",
 				"contentype": "stylesheet",
 				"item": "href",
+				"contentitem": "css/touitter.css"
+			},
+			{
+				"tag": "link",
+				"type": "rel",
+				"contentype": "stylesheet",
+				"item": "href",
+				"contentitem": "css/ajaxelka.css"
+			},
+			{
+				"tag": "link",
+				"type": "rel",
+				"contentype": "stylesheet",
+				"item": "href",
 				"contentitem": "css/style.css"
 			},
 			{
@@ -165,17 +179,37 @@
 	"pages":  [
 		"index",
 		"ajax",
-		"ajax-elka",
+		"ajaxelka",
 		"informations",
+		"touitter",
 		"404",
 		"default"
 	],
-	"ajax-elka": {
+	"index": {
         "js": [],
-        "css": [],
+        "css": ["css/ajaxelka.css"],
         "blocs": [
             "navigation",
-            "ajax-elka"
+            "landing",
+            "exercices",
+            "carousel",
+            "mooks"
+        ]
+    },
+	"touitter": {
+        "js": [],
+        "css": ["css/touitter.css"],
+        "blocs": [
+            "navigation",
+            "touitter"
+        ]
+    },
+	"ajaxelka": {
+        "js": [],
+        "css": ["css/ajaxelka.css"],
+        "blocs": [
+            "navigation",
+            "ajaxelka"
         ]
     },
 	"informations": {

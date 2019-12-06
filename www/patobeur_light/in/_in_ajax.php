@@ -18,8 +18,8 @@
                                 <div id="return"></div>
                                 <a href="http://aspirine.org/htpasswd.html">mal au crâne ? aspirine.org</a>
                             </div>
-                            <script src="AJAX/js/md5.min.js" type="text/javascript"></script>
-                            <script src="AJAX/js/code.js" type="text/javascript"></script>
+                            <script src="js/md5.min.js" type="text/javascript"></script>
+                            <script src="js/ajaxform.js" type="text/javascript"></script>
                             <script>
                                 Init();
                             </script>
