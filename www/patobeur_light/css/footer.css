@@ -15,9 +15,8 @@ footer .container{
   padding: 0;
   text-align: center;
 }
-@media (max-height:700px) {
+@media (max-height:700px ) and (max-width:700px ) {
   footer{
-    position : relative;
     height: 3rem;
   }
 }
