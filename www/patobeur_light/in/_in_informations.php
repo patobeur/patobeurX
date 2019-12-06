@@ -1,26 +1,41 @@
             <!-- - - - - - - - - - - - - - - - - - - - - -->
             <!-- informations -->
-            <section id="coding" class="exercices">
-                <h2>Exercices HTML</h2>
+            <section id="etiquettes" class="stickers">
+                <h2>things to no ?</h2>
                 <div class="container">
-                    <article class="fiche javascript" href="#">
+                    <article class="fiche" href="#">
                         <div class="annonces">
-                            <h3>Exercices HTML</h3>
-                            <p>source : <a href="#">informations</a></p>
+                            <h3>Lorem, ipsum dolor.</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae natus, facilis dignissimos totam optio ipsa tempora perspiciatis enim aliquam atque quaerat. Perspiciatis optio ullam distinctio? <a href="#">Lorem ipsum dolor sit amet.</a></p>
+                            <button>lorem</button>
                         </div>
                     </article>
-                    <article class="fiche snowmount" href="#">
+                    <article class="fiche" href="#">
                         <div class="annonces">
-                            <h3>informations</h3>
-                            <a href="#" target="out">informations</a>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati et aliquam quae, inventore deserunt iusto!</p>
+                            <h3>Lorem, ipsum dolor.</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae natus, facilis dignissimos totam optio ipsa tempora perspiciatis enim aliquam atque quaerat. Perspiciatis optio ullam distinctio? <a href="#">Lorem ipsum dolor sit amet.</a></p>
+                            <button>lorem</button>
                         </div>
                     </article>
-                    <article class="fiche elka" href="#">
+                    <article class="fiche" href="#">
                         <div class="annonces">
-                            <h3>GRID Elka</h3>
-                            <a href="#" target="out">informations</a>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ullam ipsam voluptatem?</p>
+                            <h3>Lorem, ipsum dolor.</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae natus, facilis dignissimos totam optio ipsa tempora perspiciatis enim aliquam atque quaerat. Perspiciatis optio ullam distinctio? <a href="#">Lorem ipsum dolor sit amet.</a></p>
+                            <button>lorem</button>
+                        </div>
+                    </article>
+                    <article class="fiche" href="#">
+                        <div class="annonces">
+                            <h3>Lorem, ipsum dolor.</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae natus, facilis dignissimos totam optio ipsa tempora perspiciatis enim aliquam atque quaerat. Perspiciatis optio ullam distinctio? <a href="#">Lorem ipsum dolor sit amet.</a></p>
+                            <button>lorem</button>
+                        </div>
+                    </article>
+                    <article class="fiche" href="#">
+                        <div class="annonces">
+                            <h3>Lorem, ipsum dolor.</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae natus, facilis dignissimos totam optio ipsa tempora perspiciatis enim aliquam atque quaerat. Perspiciatis optio ullam distinctio? <a href="#">Lorem ipsum dolor sit amet.</a></p>
+                            <button>lorem</button>
                         </div>
                     </article>
                 </div>

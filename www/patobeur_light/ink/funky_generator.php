@@ -84,35 +84,73 @@
 		for ($i=0;$i<count($objet[$koi][$choix]);$i++){
             $html = "\n";
             $tag = "";$type="";$contentype="";$item="";$contentitem="";
-
-            if (isset($objet[$koi][$choix][$i]['tag'])){          $tag =          $objet[$koi][$choix][$i]['tag'];}
-            if (isset($objet[$koi][$choix][$i]['type']))          $type =         $objet[$koi][$choix][$i]['type'];
-            if (isset($objet[$koi][$choix][$i]['contentype']))    $contentype =   $objet[$koi][$choix][$i]['contentype'];
-            if (isset($objet[$koi][$choix][$i]['item']))          $item =         $objet[$koi][$choix][$i]['item'];
-            if (isset($objet[$koi][$choix][$i]['contentitem']))   $contentitem =  $objet[$koi][$choix][$i]['contentitem'];
+            // -------------- 
+            if (isset($objet[$koi][$choix][$i]['typeof'])){          $typeof =          $objet[$koi][$choix][$i]['typeof'];}
+            if (isset($objet[$koi][$choix][$i]['nameof'])){          $nameof =          $objet[$koi][$choix][$i]['nameof'];}
+            // --------------
+            if (isset($objet[$koi][$choix][$i]['tag'])){            $tag =          $objet[$koi][$choix][$i]['tag'];}
+            if (isset($objet[$koi][$choix][$i]['type']))            $type =         $objet[$koi][$choix][$i]['type'];
+            if (isset($objet[$koi][$choix][$i]['contentype']))      $contentype =   $objet[$koi][$choix][$i]['contentype'];
+            if (isset($objet[$koi][$choix][$i]['item']))            $item =         $objet[$koi][$choix][$i]['item'];
+            if (isset($objet[$koi][$choix][$i]['contentitem']))     $contentitem =  $objet[$koi][$choix][$i]['contentitem'];
+            if (isset($objet[$koi][$choix][$i]['typeitem']))        $typeitem =         $objet[$koi][$choix][$i]['typeitem'];
 
             $ValidationMeta = false;
 
-            switch ($tag){
-                case 'meta':
-                    if ($contentype!="") $html ="".$tag." ".$type."=\"".$contentype."\"";
-                    if ($item!="") $html .=" ".$tag." ".$item."=\"".$contentitem."\"";
-                    $ValidationMeta = true;
-                break;
-                case 'link':
-                    if ($contentype!="") $html ="".$tag." ".$type."=\"".$contentype."\"";
-                    if ($item!="") $html .=" ".$tag." ".$item."=\"".$contentitem."\"";
+            switch ($typeof){
+                case 'charset':
+                    if ($contentype!="") $html = $tag." ".$typeof."=\"".$contentype."\"/";
                     $ValidationMeta = true;
                 break;
                 case 'title':
-                    if ($contentype!="") $html =$tag.">".$contentype."</".$tag;
+                    if ($contentype!="") $html = $tag.">".$contentype."</".$tag;
                     $ValidationMeta = true;
                 break;
-                case 'script':
-                    if ($contentype!="") $html =$tag." ".$type."=\"".$contentype."\"></".$tag;
+                case 'name':
+                    if ($contentype!="") $html = $tag." ".$typeof."=\"".$contentype."\"";
+                    if ($item!="") $html .= " ".$item."=\"".$contentitem."\"";
+                    $ValidationMeta = true;
+                break;
+                case 'http-equiv':
+                    if ($contentype!="") $html = $tag." ".$typeof."=\"".$contentype."\"";
+                    if ($item!="") $html .= " ".$item."=\"".$contentitem."\"";
+                    $ValidationMeta = true;
+                break;
+                case 'rel':
+                    if ($contentype!="") $html = $tag." ".$typeof."=\"".$contentype."\"";
+                    if ($item!="") $html .= " ".$item."=\"".$contentitem."\"";
+                    $ValidationMeta = true;
+                break;
+                case 'favicon':
+                    if ($contentype!="") $html = $tag." ".$typeof."=\"".$contentype."\"";
+                    if ($item!="") $html .= " ".$item."=\"".$contentitem."\"";
+                    if ($type!="") $html .= " ".$type."=\"".$typeitem."\" /";
                     $ValidationMeta = true;
                 break;
             }
+
+
+
+            // switch ($tag){
+            //     case 'meta':
+            //         if ($contentype!="") $html ="".$tag." ".$type."=\"".$contentype."\"";
+            //         if ($item!="") $html .= $item."=\"".$contentitem."\"";
+            //         $ValidationMeta = true;
+            //     break;
+            //     case 'link':
+            //         if ($contentype!="") $html ="".$tag." ".$type."=\"".$contentype."\"";
+            //         if ($item!="") $html .= $item."=\"".$contentitem."\"";
+            //         $ValidationMeta = true;
+            //     break;
+            //     case 'title':
+            //         if ($contentype!="") $html = $tag.">".$contentype."</".$tag;
+            //         $ValidationMeta = true;
+            //     break;
+            //     case 'script':
+            //         if ($contentype!="") $html = $tag." ".$type."=\"".$contentype."\"></".$tag;
+            //         $ValidationMeta = true;
+            //     break;
+            // }
             if ($ValidationMeta) $phrase .= Spacer($Origine,2)."<".$html.">".$n;
         }
         if ($phrase!="") $phrase =Spacer($Origine,1)."<".$balise.">".$n.$phrase.Spacer($Origine,1)."</".$balise.">";
@@ -133,7 +171,7 @@
     function Check_empty($objet){
         $checked = "";
         if (isset($objet) && $objet!=""){
-            $checked =$objet;
+            $checked = $objet;
         }
         return $checked;
     }

@@ -19,7 +19,7 @@
                     <article class="fiche elka" href="#">
                         <div class="annonces">
                             <h3>GRID Elka</h3>
-                            <a href="adds/htmlform/index.html" target="out">Formulaire Elka</a>
+                            <a href="adds/form-js-ajax-php/index.html" target="out">Formulaire Elka</a>
                             <p>Exercice d'intégration d'un formulaire en Responsiv Design</p>
                         </div>
                     </article>

@@ -4,39 +4,38 @@
 	"time_stamp": "2019-12-01 03:28:12",
 	"dom": {
 		"blocs": {
-            "0": "checksum",
-            "1": "structure",
-            "2": "head",
-            "3": "body-start",
-            "4": "blocs",
-            "5": "rs",
-            "6": "footer",
-            "7": "end_js",
-            "8": "body-end"
-        }
-    },
+			"0": "checksum",
+			"1": "structure",
+			"2": "head",
+			"3": "body-start",
+			"4": "blocs",
+			"5": "rs",
+			"6": "footer",
+			"7": "end_js",
+			"8": "body-end"
+		}
+	},
 	"blocs": {
 		"blocs": {
-            "0": "checksum",
-            "1": "structure",
-            "2": "head",
-            "3": "body-start",
-            "4": "blocs",
-            "5": "rs",
-            "6": "footer",
-            "7": "end_js",
-            "8": "body-end"
-        }
-    },
+			"0": "checksum",
+			"1": "structure",
+			"2": "head",
+			"3": "body-start",
+			"4": "blocs",
+			"5": "rs",
+			"6": "footer",
+			"7": "end_js",
+			"8": "body-end"
+		}
+	},
 	"structure": {
 		"meta": {
-            "doctype": "<!DOCTYPE html>",
-            "lang": "<html lang=\"fr\">"
-        }
-    },
+			"doctype": "<!DOCTYPE html>",
+			"lang": "<html lang=\"fr\">"
+		}
+	},
 	"end_js": {
-		"out": [
-			{
+		"out": [{
 				"tag": "script",
 				"type": "src",
 				"contentype": "js/jquery-3.4.1.min.js"
@@ -52,49 +51,54 @@
 				"contentype": "js/devtools.js"
 			}
 		],
-		"in": [
-		]
-    },
-    "head": {
+		"in": []
+	},
+	"head": {
 		"meta": [{
+				"typeof": "charset",
+				"nameof": "charset",
 				"tag": "meta",
-				"type": "charset",
 				"contentype": "UTF-8"
 			},
 			{
+				"typeof": "title",
+				"nameof": "title",
 				"tag": "title",
-				"type": "title",
 				"contentype": "Ma formation au Cefim à tours (2019-2020)"
-            },
-            {
+			},
+			{
+				"typeof": "name",
+				"nameof": "name",
 				"tag": "meta",
-				"type": "name",
+				"type": "",
 				"contentype": "description",
 				"item": "content",
 				"contentitem": "Description de ma page"
 			},
 			{
+				"typeof": "name",
 				"tag": "meta",
-				"type": "name",
+				"type": "",
 				"contentype": "viewport",
 				"item": "content",
 				"contentitem": "width=device-width, initial-scale=1.0"
 			},
 			{
+				"typeof": "http-equiv",
 				"tag": "meta",
-				"type": "http-equiv",
 				"contentype": "X-UA-Compatible",
 				"item": "content",
 				"contentitem": "ie=edge"
 			},
 			{
+				"typeof": "rel",
 				"tag": "link",
-				"type": "rel",
 				"contentype": "stylesheet",
 				"item": "href",
 				"contentitem": "css/bootstrap.min.css"
 			},
 			{
+				"typeof": "rel",
 				"tag": "link",
 				"type": "rel",
 				"contentype": "stylesheet",
@@ -102,6 +106,7 @@
 				"contentitem": "css/touitter.css"
 			},
 			{
+				"typeof": "rel",
 				"tag": "link",
 				"type": "rel",
 				"contentype": "stylesheet",
@@ -109,6 +114,7 @@
 				"contentitem": "css/ajaxelka.css"
 			},
 			{
+				"typeof": "rel",
 				"tag": "link",
 				"type": "rel",
 				"contentype": "stylesheet",
@@ -116,6 +122,7 @@
 				"contentitem": "css/style.css"
 			},
 			{
+				"typeof": "rel",
 				"tag": "link",
 				"type": "rel",
 				"contentype": "stylesheet",
@@ -123,6 +130,7 @@
 				"contentitem": "css/cover.css"
 			},
 			{
+				"typeof": "rel",
 				"tag": "link",
 				"type": "rel",
 				"contentype": "stylesheet",
@@ -130,6 +138,7 @@
 				"contentitem": "css/mooks.css"
 			},
 			{
+				"typeof": "rel",
 				"tag": "link",
 				"type": "rel",
 				"contentype": "stylesheet",
@@ -137,6 +146,7 @@
 				"contentitem": "css/exercices.css"
 			},
 			{
+				"typeof": "rel",
 				"tag": "link",
 				"type": "rel",
 				"contentype": "stylesheet",
@@ -144,6 +154,7 @@
 				"contentitem": "css/cefim.css"
 			},
 			{
+				"typeof": "rel",
 				"tag": "link",
 				"type": "rel",
 				"contentype": "stylesheet",
@@ -151,6 +162,7 @@
 				"contentitem": "css/competences.css"
 			},
 			{
+				"typeof": "rel",
 				"tag": "link",
 				"type": "rel",
 				"contentype": "stylesheet",
@@ -158,6 +170,7 @@
 				"contentitem": "css/footer.css"
 			},
 			{
+				"typeof": "rel",
 				"tag": "link",
 				"type": "rel",
 				"contentype": "stylesheet",
@@ -165,18 +178,28 @@
 				"contentitem": "css/404.css"
 			},
 			{
+				"typeof": "rel",
 				"tag": "link",
 				"type": "rel",
 				"contentype": "stylesheet",
 				"item": "href",
 				"contentitem": "css/surcharge.css"
+			},
+			{
+				"typeof": "favicon",
+				"tag": "link",
+				"contentype": "icon",
+				"item": "href",
+				"contentitem": "paticon.png",
+				"type": "type",
+				"typeitem": "image/png"
 			}
 		]
 	},
-	"defaultpage":  [
+	"defaultpage": [
 		"index"
 	],
-	"pages":  [
+	"pages": [
 		"index",
 		"ajax",
 		"ajaxelka",
@@ -186,63 +209,63 @@
 		"default"
 	],
 	"index": {
-        "js": [],
-        "css": ["css/ajaxelka.css"],
-        "blocs": [
-            "navigation",
-            "landing",
-            "exercices",
-            "carousel",
-            "mooks"
-        ]
-    },
+		"js": [],
+		"css": ["css/ajaxelka.css"],
+		"blocs": [
+			"navigation",
+			"landing",
+			"exercices",
+			"carousel",
+			"mooks"
+		]
+	},
 	"touitter": {
-        "js": [],
-        "css": ["css/touitter.css"],
-        "blocs": [
-            "navigation",
-            "touitter"
-        ]
-    },
+		"js": [],
+		"css": ["css/touitter.css"],
+		"blocs": [
+			"navigation",
+			"touitter"
+		]
+	},
 	"ajaxelka": {
-        "js": [],
-        "css": ["css/ajaxelka.css"],
-        "blocs": [
-            "navigation",
-            "ajaxelka"
-        ]
-    },
+		"js": [],
+		"css": ["css/ajaxelka.css"],
+		"blocs": [
+			"navigation",
+			"ajaxelka"
+		]
+	},
 	"informations": {
-        "js": [],
-        "css": [],
-        "blocs": [
-            "navigation",
-            "informations"
-        ]
-    },	
+		"js": [],
+		"css": [],
+		"blocs": [
+			"navigation",
+			"informations"
+		]
+	},
 	"404": {
-        "js": [],
-        "css": ["css/404.css"],
-        "blocs": [
-            "navigation",
-            "404"
-        ]
-    },	
+		"js": [],
+		"css": ["css/404.css"],
+		"blocs": [
+			"navigation",
+			"404"
+		]
+	},
 	"ajax": {
-        "js": [],
-        "css": [],
-        "blocs": [
-            "navigation",
-            "ajax"
-        ]
-    },	
+		"js": [],
+		"css": [],
+		"blocs": [
+			"navigation",
+			"ajax"
+		]
+	},
 	"default": {
-        "js": [],
-        "css": [],
-        "blocs": [
-            "navigation",
-            "404"
-        ]
-    },	
-    "checksum": "checkmefive"
+		"js": [],
+		"css": [],
+		"blocs": [
+			"navigation",
+			"404"
+		]
+	},
+	"checksum": "checkmefive"
 }
