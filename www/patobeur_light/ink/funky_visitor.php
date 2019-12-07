@@ -10,7 +10,8 @@
                     //$compteur_f = fopen($file, 'a+');               // sinon on le crée
                     //$compte = 0;                                    //  et on colle 0 dedans ;)
             }
-            if(!isset($_SESSION['VISITOR'] || $_SESSION['VISITOR'] != 'VISITOR')){                       // SI PAS DE SESSION on te compte ;)
+            if( !isset($_SESSION['VISITOR']) || $_SESSION['VISITOR'] != 'VISITOR' ){
+                    // SI PAS DE SESSION on te compte
                     $compte++;                                      // on ajoute 1 au compteur ++
                     $_SESSION['VISITOR'] = 'VISITOR';               // on colle une betise en session pour pouvoir la tester au passage suivant
                     $_SESSION['TICKET'] = $compte;                  // je rajoute le numero en session, ca ne me sert a rien.... pour l'instant ;)
@@ -20,4 +21,5 @@
             fclose($compteur_f);                                    // je ferme de fichier txt !
             //return '<div id="visites">'.$compte.' visites</div>';   // un return mais ca ne me sert a rien.... pour l'instant ;)
     }
+    VISITOR();
 ?>

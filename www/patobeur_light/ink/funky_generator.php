@@ -26,12 +26,12 @@
         }
         
         $bloc="";
-        $bloc .= Gen_Page_Top($JSON_ARR,$koi,$choix,0,$CURR_PAGE);
+        $bloc .= Gen_Head($JSON_ARR,$koi,$choix,0,$CURR_PAGE);
         $bloc .= Gen_BODY($CURR_PAGE,$JSON_ORIG,$JSON_ARR,$koi,$choix,0);
         return $bloc;
     }
     // -----------------------------------------------------------------------------------------------------------------------
-	function Gen_Page_Top($JSON_ARR,$koi,$choix,$Origine,$CURR_PAGE){
+	function Gen_Head($JSON_ARR,$koi,$choix,$Origine,$CURR_PAGE){
         $n=PHP_EOL;$bloc="";
         if (isset($JSON_ARR[$koi][$choix]['doctype'])){              $bloc .=        $JSON_ARR[$koi][$choix]['doctype'].$n;}
         if (isset($JSON_ARR[$koi][$choix]['lang'])){                 $bloc .=        $JSON_ARR[$koi][$choix]['lang'].$n;}
@@ -42,33 +42,51 @@
     }
     // -----------------------------------------------------------------------------------------------------------------------
     
+
+
+
+
     // -----------------------------------------------------------------------------------------------------------------------
     // Point G.culture
     // un post sympa sur le json et le javascript
     // https: //openclassrooms.com/forum/sujet/jquery-utiliser-un-json-cree-avec-php
 	// -----------------------------------------------------------------------------------------------------------------------
     function Gen_BODY($CURR_PAGE,$JSON_ORIG,$JSON_ARR,$koi,$choix,$Origine=0){
+
+
         $n=PHP_EOL;$bloc="\n";
         $bloc .= Spacer($Origine,1).'<body>'.$n;
         $bloc .= Spacer($Origine,2).'<div class="fullpage">'.$n;
+
+
         // -------------------------------------- 
         $rootpassif =  'in/_in_';
         $rootactif =  'in/_ink_';
         $pageextension = ".php";            // utiles pour le file_get_contents plus bas
+
+
         // -------------------------------------- 
         // generation des pages a integrer dans le body en dessous de navigation mais en dessus du footer
 
-        // BUGG ICI BUGG ICI BUGG ICI BUGG ICI BUGG ICI BUGG ICI BUGG ICI 
+        // BUGG ICI BUGG ICI BUGG ICI BUGG ICI BUGG ICI BUGG ICI BUGG ICI  ???
+        // ici je cherche $CURR_PAGE dans le json
+        // je prend la liste des page _in_ a intégrer
         $tempovalue = count($JSON_ARR[$CURR_PAGE]['blocs']);
         for ($nbfichier = 0; $nbfichier < $tempovalue; $nbfichier++){
             $bloc .= file_get_contents($rootpassif.$JSON_ARR[$CURR_PAGE]['blocs'][$nbfichier].$pageextension,TRUE).$n;
         }
-        // ----------------- A SECURISER DE FOU ! -----------------
-        // ----------------- A Transformer en JSON ----------------
-        require_once('ink/funky_visitor.php');
-        VISITOR();
-        $bloc .= preg_replace("_VISITOR_", $_SESSION['TICKET'], file_get_contents($rootactif.'visitor.php', TRUE)).$n;
+
+
+
+        
+        $bloc .= GetPageParLots($JSON_ARR['toutes']);
+
+        $bloc .= GetPageParLots($JSON_ARR['actif']);
+
+        // FOOTER
         $bloc .= file_get_contents($rootpassif.'footer.php',TRUE).$n;
+
+
 
         //
         // GENERATION JS SCRIPT TROUVE DANS LE JSON
@@ -94,6 +112,41 @@
 		return $bloc;
     }
     // -----------------------------------------------------------------------------------------------------------------------
+
+
+
+function GetPageParLots($ARRRRAIE){
+    $rootactif2 =  'in/_ink_';
+    
+    if ($ARRRRAIE['actif']){
+        $tempovalueout = count($ARRRRAIE['files']);
+        if ($tempovalueout > 0 ){
+            for ($nbfichierout = 0; $nbfichierout < $tempovalueout; $nbfichierout++){
+
+                if ($ARRRRAIE['files'][$nbfichierout]['page']!="") $ext_file = "ink/funky_".$ARRRRAIE['files'][$nbfichierout]['page'].".php"; // file to include
+                if ($ARRRRAIE['files'][$nbfichierout]['page']!="") $ink_file = $rootactif2.$ARRRRAIE['files'][$nbfichierout]['page'].".php"; // file to get_contents
+                if ($ARRRRAIE['files'][$nbfichierout]['aremplacer']!="") $aremplacer = $ARRRRAIE['files'][$nbfichierout]['aremplacer'];
+                if ($ARRRRAIE['files'][$nbfichierout]['session']!="") $lasesssion = $ARRRRAIE['files'][$nbfichierout]['session'];
+                if ($ARRRRAIE['files'][$nbfichierout]['require']!="") $require = $ARRRRAIE['files'][$nbfichierout]['require'];
+                if ($ARRRRAIE['files'][$nbfichierout]['visible']!="") $visible = $ARRRRAIE['files'][$nbfichierout]['visible'];
+                // ------------------- DANGER ! ----------------------------------
+                // ici aussi je compte sur le fait que le json est planqué sous www)
+                if ($require) require_once($ext_file); // on appel le fichier demander dans le json (ça craint !!! mais ??? )
+                if ($visible) return preg_replace($aremplacer, $_SESSION[$lasesssion], file_get_contents($ink_file, TRUE)).$n; // re ça craint )
+                // $bloc .= file_get_contents($rootpassif.$ARRRRAIE['blocs'][$nbfichierout].$pageextension,TRUE).$n;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
     function Gen_Curr_META($JSON_ARR,$pagename){
 
     }

@@ -1,0 +1,114 @@
+.fullpage {
+    background-image: url('../img/runner.jpg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.bladerunner {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(217, 255, 0, 0.315);
+}
+
+.bladerunner h3 {
+    font-size: 4rem;
+    color: rgba(0, 0, 0, 0.527);
+}
+
+.ligne {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.ligne div {
+    padding: 0 .5rem;
+    margin: .2rem;
+    outline: 1px solid black;
+}
+
+.ligne div:hover {
+    padding: 0 .5rem;
+    margin: .2rem;
+    outline: 1px solid rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.ligne .harry {
+    background-color: rgba(255, 255, 255, 0.404);
+}
+
+.ligne .blade {
+    background-color: rgba(255, 0, 0, 0.404);
+}
+
+.ligne .runner {
+    background-color: rgba(0, 60, 255, 0.404);
+    color: rgba(255, 255, 255, 0.404);
+}
+
+@media (max-width:400px) {
+    .ligne {
+        margin: .2rem 0;
+    }
+    .ligne div {
+        font-size: 1rem;
+        margin: 0 .05rem;
+        padding: 0 .3rem;
+        display: block;
+    }
+    .ligne div:hover {
+        font-size: 1rem;
+        margin: 0 .05rem;
+        padding: 0 .3rem;
+        background-color: rgba(0, 60, 255, 0.404);        
+    }
+    .bladerunner h3 {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width:400px) {
+    .ligne div {
+        font-size: 1.2rem;
+    }
+    .ligne div:hover {
+        background-color: rgba(0, 255, 21, 0.404);
+    }
+    .bladerunner h3 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width:701px) {
+    .ligne div {
+        font-size: 2rem;
+    }
+    .ligne div:hover {
+        margin: -5px -5px 5px 5px ;
+        background-color: rgba(255, 0, 0, 0.726);
+        transform: rotate(-20deg);
+        box-shadow: 5px 5px 5px rgb(0, 0, 0);
+    }
+    .bladerunner h3 {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width:1000px) {
+    .ligne {
+    }
+    .bladerunner h3 {
+        font-size: 4rem;
+    }
+    .ligne div {
+        font-size: 2rem;
+    }
+}

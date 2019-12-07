@@ -35,8 +35,7 @@
 		}
 	},
 	"end_js": {
-		"out": [
-			{
+		"out": [{
 				"typeof": "src",
 				"nameof": "script",
 				"tag": "script",
@@ -184,7 +183,15 @@
 		"404",
 		"default"
 	],
+	"toutes": {
+		"actif": "true",
+		"files": [{"visible": "true",
+			"require": "true",
+			"page": "visitor","aremplacer": "_VISITOR_","session": "TICKET"}]
+	},
 	"index": {
+		"actif": "false",
+		"files": [{"visible": "true","require": "true","page": "visitor","aremplacer": "_VISITOR_","session": "TICKET"}],
 		"js": [
 			"js/constantes.js",
 			"js/moneychange.js",
@@ -194,7 +201,8 @@
 			"js/boireoucoder.js",
 			"js/triangles.js"
 		],
-		"css": [],
+		"css": [
+			"css/visitor.css"],
 		"blocs": [
 			"navigation",
 			"landing",
@@ -204,6 +212,7 @@
 		]
 	},
 	"touitter": {
+		"actif": false,
 		"js": ["js/touitter.js"],
 		"css": ["css/touitter.css"],
 		"blocs": [
@@ -213,6 +222,7 @@
 		]
 	},
 	"ajaxelka": {
+		"actif": false,
 		"js": [],
 		"css": ["css/ajaxelka.css"],
 		"blocs": [
@@ -221,6 +231,7 @@
 		]
 	},
 	"informations": {
+		"actif": false,
 		"js": [],
 		"css": [],
 		"blocs": [
@@ -229,6 +240,7 @@
 		]
 	},
 	"404": {
+		"actif": false,
 		"js": [],
 		"css": ["css/404.css"],
 		"blocs": [
@@ -237,6 +249,7 @@
 		]
 	},
 	"ajax": {
+		"actif": false,
 		"js": [],
 		"css": [],
 		"blocs": [
@@ -245,6 +258,7 @@
 		]
 	},
 	"default": {
+		"actif": false,
 		"js": [],
 		"css": [],
 		"blocs": [
