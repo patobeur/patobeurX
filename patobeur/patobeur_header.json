@@ -98,69 +98,6 @@
 				"contentitem": "ie=edge"
 			},
 			{
-				"typeof": "rel",
-				"tag": "link",
-				"contentype": "stylesheet",
-				"item": "href",
-				"contentitem": "css/bootstrap.min.css"
-			},
-			{
-				"typeof": "rel",
-				"tag": "link",
-				"contentype": "stylesheet",
-				"item": "href",
-				"contentitem": "css/style.css"
-			},
-			{
-				"typeof": "rel",
-				"tag": "link",
-				"contentype": "stylesheet",
-				"item": "href",
-				"contentitem": "css/cover.css"
-			},
-			{
-				"typeof": "rel",
-				"tag": "link",
-				"contentype": "stylesheet",
-				"item": "href",
-				"contentitem": "css/mooks.css"
-			},
-			{
-				"typeof": "rel",
-				"tag": "link",
-				"contentype": "stylesheet",
-				"item": "href",
-				"contentitem": "css/exercices.css"
-			},
-			{
-				"typeof": "rel",
-				"tag": "link",
-				"contentype": "stylesheet",
-				"item": "href",
-				"contentitem": "css/cefim.css"
-			},
-			{
-				"typeof": "rel",
-				"tag": "link",
-				"contentype": "stylesheet",
-				"item": "href",
-				"contentitem": "css/competences.css"
-			},
-			{
-				"typeof": "rel",
-				"tag": "link",
-				"contentype": "stylesheet",
-				"item": "href",
-				"contentitem": "css/footer.css"
-			},
-			{
-				"typeof": "rel",
-				"tag": "link",
-				"contentype": "stylesheet",
-				"item": "href",
-				"contentitem": "css/surcharge.css"
-			},
-			{
 				"typeof": "favicon",
 				"tag": "link",
 				"contentype": "icon",
@@ -183,11 +120,22 @@
 		"404",
 		"default"
 	],
-	"toutes": {
+	"aouvriratouslescoups": {
 		"actif": "true",
-		"files": [{"visible": "true",
-			"require": "true",
-			"page": "visitor","aremplacer": "_VISITOR_","session": "TICKET"}]
+		"files": [{"visible": "true","require": "true","page": "visitor","aremplacer": "_VISITOR_","session": "TICKET"}]
+	},
+	"atouslescoups": {
+		"actif": "true",
+		"css": [
+			"css/bootstrap.min.css",
+			"css/style.css",
+			"css/footer.css",
+			"css/surcharge.css",
+			"css/visitor.css"],
+		"js": [
+			"js/jquery-3.4.1.min.js",
+			"js/bootstrap.bundle.min.js",
+			"js/devtools.js"]
 	},
 	"index": {
 		"actif": "false",
@@ -202,7 +150,12 @@
 			"js/triangles.js"
 		],
 		"css": [
-			"css/visitor.css"],
+			"css/cover.css",
+			"css/mooks.css",
+			"css/exercices.css",
+			"css/cefim.css",
+			"css/competences.css"
+		],
 		"blocs": [
 			"navigation",
 			"landing",
@@ -223,7 +176,8 @@
 	},
 	"ajaxelka": {
 		"actif": false,
-		"js": [],
+		"js": ["js/md5.min.js",
+			"js/ajaxelka.js"],
 		"css": ["css/ajaxelka.css"],
 		"blocs": [
 			"navigation",

@@ -22,8 +22,5 @@
                         </div>
                     </div>
                 </div>
-                <script src="js/md5.min.js" type="text/javascript"></script>
-                <script src="js/ajaxform.js" type="text/javascript"></script>
-                <script>Init();</script>
             </div>
             <!-- END-COVER -->

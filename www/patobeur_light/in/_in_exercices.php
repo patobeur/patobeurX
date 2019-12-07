@@ -13,14 +13,21 @@
                         <div class="annonces">
                             <h3>HTML5 et CSS3 SnowMount</h3>
                             <a href="adds/htmlcss/snowmount/index.html" target="out">SnowMount</a>
-                            <p>Exercice d'intégration d'une structure de page responsive avec GRID et FLEX</p>
+                            <p>Exercice d'intégration d'une structure de page responsive avec GRID et FLEX.</p>
                         </div>
                     </article>
                     <article class="fiche elka" href="#">
                         <div class="annonces">
                             <h3>GRID Elka</h3>
                             <a href="adds/form-js-ajax-php/index.html" target="out">Formulaire Elka</a>
-                            <p>Exercice d'intégration d'un formulaire en Responsiv Design</p>
+                            <p>Exercice d'intégration d'un formulaire en Responsiv Design. Cerise sur le gateau y'a de l'Ajaxx !</p>
+                        </div>
+                    </article>
+                    <article class="fiche bladerunner" href="#">
+                        <div class="annonces">
+                            <h3>Algo Bladerunner</h3>
+                            <a href="adds/bladerunner/index.html" target="out">Bladerunner</a>
+                            <p>Rappelez vous ? mais oui : C'était quoi déjà ?</p>
                         </div>
                     </article>
                     <article class="fiche encours" href="#">

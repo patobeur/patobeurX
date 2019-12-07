@@ -53,3 +53,4 @@ function clearboard(){
     console.log("ok : clearing");
     document.getElementById("finish").innerHTML = "Bravo !";
 }
+Init();

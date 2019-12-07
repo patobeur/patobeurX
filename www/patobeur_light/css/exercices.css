@@ -78,6 +78,9 @@
 .exercices .container article.elka {
   background-image: url('../img/veste-blazer-evasee-noir-femme.png');
 }
+.exercices .container article.bladerunner {
+  background-image: url('../adds/bladerunner/img/runner.jpg');
+}
 
 .triangle,.boisson, .euros, .dollar, .perimetre, .kelvin, .serial {
   background-image: url('../img/javascript.png');
