@@ -13,36 +13,66 @@ function Jai_Une_Reponse(Paquet) {
     // }
 }
 function LetGoGoGO(Paquet) {
-    //  Paquet = JSON.parse(Paquet);
     // if (Paquet && Paquet.length > 0) {
-            document.getElementById('readyState').innerHTML = Paquet['messages'].length+" Fiche(s)";
+        document.getElementById('readyState').innerHTML = Paquet['messages'].length+" Fiche(s)";
+        
+        //var acteurs = lesacteurs(Paquet);
+
         for (i = 0; i < Paquet['messages'].length; i++){
             IncommingCreator(Paquet['messages'],i);
+        }
     // }
 }
-}
+// function lesacteurs(Paquet){
+//     Paquet = Paquet['messages'];
+//     var names = ["moi"];
+//     var comptes = [0];
+//     var newname = false;
+//     for (i = 0; i < Paquet.length; i++){
+//         newname = false;
+//         var name = Paquet[i]['name'];
+//         for (j=0; j < names.length; j++){
+//             console.log("test:"+name);
+//             if (names[j]==name){
+//                 newname = true;
+//                 comptes[j] = comptes[j] + 1;
+//                 break;
+//             }
+//         }
+//             if (newname == false){
+//                 console.log("new:"+name);
+//                 names.push(name);
+//                 comptes.push(0)
+//             }
+//     }
+//     return names;
+// }
 
 
 function IncommingCreator(fiche,num) {
     fiche = fiche[num];
     //date et heure du touiite ??
 
+    var divtestin = document.createElement("div");
+    divtestin.className = 'fichetouit';
+    rgbautoT(divtestin); // couleur aleatoire   
+    texte = '<h3>#' + fiche['name'] + '</h3>';
+    texte += '<p>Mess: ' + fiche['message']  + '</p>';
+    texte += '<p>( ' + fiche['likes']  + ' Likes) [Ip: ' + fiche['ip']  + ']</p>';
+    divtestin.innerHTML = texte;
 
     var divtest = document.createElement("div");
     divtest.className = 'fiche';
-    divtest.id = 'touit_'+num;
-    rgbautoT(divtest);
-    
-    texte = '<div class="fichetouit">';
-    texte += '<h3>#' + fiche['name'] + '</h3>';
-    texte += '<p>Mess: ' + fiche['message']  + '</p>';
-    texte += '<p>Likes: ' + fiche['message']  + '</p>';
-    texte += '<p>Ip: ' + fiche['ip']  + '</p>';
-    texte += '</div>';
-    divtest.innerHTML = texte;
+    divtest.id = 'touit_'+num; 
+    divtest.insertBefore(divtestin, divtest.childNodes[0]);
 
     var objTo = document.querySelector('#touittzone');
     objTo.insertBefore(divtest, objTo.childNodes[0]);
+
+    
+
+
+    //return fiche['name'];
 }
 
 

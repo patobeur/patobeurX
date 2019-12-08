@@ -12,6 +12,7 @@
     border-radius: 7px;
     background-color: white;
     padding: 0 1rem;
+    margin: 0 2rem;
 }
 .touitter .touitters .navigation{
     width: 100%;
@@ -19,21 +20,25 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: rgb(79, 67, 243);
+    background-color: rgba(79, 67, 243, 0.473);
 }
 
 
 .touitter .touitters #touittzone {
-    background-color: rgb(204, 123, 18);
     width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
 
 .touitter .touitters #touittzone .fiche {
-    background-color: rgb(51, 255, 0);
     width: 100%;
     padding: .1rem;
+    border-radius: 7px;
+    height: 7rem;
+    overflow: hidden;
+}
+.touitter .touitters #touittzone .fiche:hover {
+    height: auto;
 }
 @media (min-width:600px) {
     .touitter .touitters #touittzone .fiche {max-width: 33%;}
@@ -46,6 +51,8 @@
         .touitter .touitters #touittzone .fiche {width:calc(100% / 6)}
 }
 .touitter .touitters #touittzone .fiche .fichetouit {
+    background-color: rgba(255, 255, 255, 0.575);
+    border-radius: 7px;
     padding: .5rem;
     margin: .1rem;
 }

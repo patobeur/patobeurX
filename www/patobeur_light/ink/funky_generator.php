@@ -178,7 +178,7 @@
         // ouvrir les pages a include a coup sur genre visitor
 
 
-        $bloc .= GetPageParLots($JSON_ARR['aouvriratouslescoups'],'files');
+        $bloc .= GetPageParLots($JSON_ARR['aouvriratouslescoups'],'files').$n;
 
         
 
