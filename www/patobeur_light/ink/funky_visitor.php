@@ -22,5 +22,5 @@
             //return '<div id="visites">'.$compte.' visites</div>';   // un return mais ca ne me sert a rien.... pour l'instant ;)
             return $compte;
     }
-    $valeurderetour = VISITOR();
+    $valeurderetour = 'Hit:'.VISITOR();
 ?>

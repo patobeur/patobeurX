@@ -1,5 +1,8 @@
 <?php
-if(isset($_POST) || isset($_POST['data'])){
+    //require_once('patobeurjson.php');
     require_once('../../../patobeur/touitter.php');
-}
+    if ($retourtouitter){
+        header('Content-Type: application/json');
+        echo $retourtouitter;
+    }
 ?>

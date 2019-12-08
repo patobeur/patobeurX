@@ -100,6 +100,11 @@
 				"href": "adds/form-js-ajax-php/",
 				"target": "_self",
 				"title": "Form Ajax"
+			},
+			{
+				"href": "http://apteo.org/patobeur/ink/redirtouitter.php",
+				"target": "_out",
+				"title": "Json en test"
 			}
 		]
 	},

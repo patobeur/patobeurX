@@ -49,22 +49,29 @@
     padding: .5rem;
     margin: .1rem;
 }
-.touitter .touitters #touittzone .fiche .fichetouit h1 {
+.touitter .touitters #touittzone .fiche .fichetouit h3 {
     font-size: 1.2rem;
     padding: .5rem;
     margin: .1rem;
     outline: 1px solid black;
 }
-
-
-.joker {
-    background-color: #EAEAEA;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+.touitter .touitters #touittzone .fiche .fichetouit p {
+    font-size: 1rem;
+    padding: 0;
     margin: 0;
+    outline: 0;
+}
+
+
+#consoleajax {
+    position: absolute;
+    top:120px;
+    right:5px;
+    width:max-content;
+    background-color: #EAEAEA;
+    margin: 0;
+    margin: 1rem;
+    border-radius: 7px;
 }
 .joker2 {
     background-color: #EAEAEA;

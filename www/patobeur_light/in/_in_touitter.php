@@ -6,7 +6,14 @@
                         <div class="menu">Mafiche</div>
                         <div class="menu">J'aime</div>
                     </div>
-                    <div id="console"></div>
+                    <div id="retourdebaton"></div>
+                    <div id="retourdebaton"></div>
+
+                    <div id="consoleajax">Ajax 
+                        <div id="status"></div>
+                        <div id="readyState"></div>
+                        <div id="messState"></div>
+                    </div>
 
                     <div id="touittzone" class="touittzone"></div>
                 </div>

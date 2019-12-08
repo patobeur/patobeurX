@@ -18,11 +18,13 @@ function Init() {
         }
     };
 }
+// ----------------------------------------------------------------
 function Response(txt) {
     if (txt == "ok") {
         clearboard();
     }
 }
+// ----------------------------------------------------------------
 function getAjax(url, para, success) {
     let message = '';
     let message2 = '';
@@ -75,6 +77,7 @@ function getAjax(url, para, success) {
     xhr.send("data=" + para);
     return xhr;
 }
+// ----------------------------------------------------------------
 function clearboard() {
     document.getElementById("finish").innerHTML = '<div class="form-page"><div class="formulaire"><a href="http://apteo.org/patobeur/">Bravo !</a></div></div>';
 }
