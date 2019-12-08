@@ -182,7 +182,7 @@
 		"title": "Touitter",
 		"actif": false,
 		"js": ["js_pages/touitter.js"],
-		"css": ["css_outils/touitter.css"],
+		"css": ["css_pages/touitter.css"],
 		"blocs": [
 			"touitter",
 			"touit_info"
@@ -193,7 +193,7 @@
 		"actif": false,
 		"js": ["js_pages/md5.min.js",
 			"js_pages/ajaxelka.js"],
-		"css": ["css_outils/ajaxelka.css"],
+		"css": ["css_pages/ajaxelka.css"],
 		"blocs": [
 			"ajaxelka"
 		]
