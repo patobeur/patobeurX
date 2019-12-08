@@ -185,10 +185,16 @@ input {
     padding: 0;
     margin-left: auto;
     border: 0;
+    background-image: url('../img/elkalogin.svg');
+    background-size: cover;
+    background-position: center center;
+    width: 110px;
+    height: 35px;
+    background-color: none;
 }
 
 .soumission::after {
-    background-image: url('../img/submit.png');
+    background-image: url('../img/elkalogin.svg');
     background-size: 20px 20px;
     background-position: bottom left;
     display: inline-block;

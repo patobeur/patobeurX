@@ -20,6 +20,7 @@
             }
             fclose($compteur_f);                                    // je ferme de fichier txt !
             //return '<div id="visites">'.$compte.' visites</div>';   // un return mais ca ne me sert a rien.... pour l'instant ;)
+            return $compte;
     }
-    VISITOR();
+    $valeurderetour = VISITOR();
 ?>

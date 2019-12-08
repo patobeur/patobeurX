@@ -1,0 +1,140 @@
+
+/* LANGAGES FLEX */
+.exercices {
+  padding: 3rem 0 1rem 0;
+  margin: 0;
+  /* background-color: rgba(0,0,0,.8); */
+  background-image: url('../img/exercices_bg.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+}
+.exercices .container {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+    display: flex;
+    flex-wrap: wrap;  
+    justify-content: center;
+    align-items: stretch;
+}
+.exercices h2 {
+  font-size: 3rem;
+  color:#FFF;
+  text-align: center;
+  padding: 0 0 1.2rem 0;
+}
+.exercices .container .fiche {
+  /* width: 250px;
+  height: 250px;
+  max-width: 250px;
+  max-height: 250px; */
+  width: 250px;
+  height: 250px;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  color:#FFF;
+  margin:.5rem;
+  background-size: cover;
+  background-position: 50% 50%;
+  font-size: 1rem;
+}
+.exercices .container .fiche p {
+  text-align: center;
+  padding: 0 1rem 0 1rem;
+}
+.exercices .container .fiche .annonces {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.336);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  text-shadow: 5px 0px 5px rgb(0, 0, 0);
+}
+.exercices .container .fiche figure .annonces h3 {
+  font-size: 2rem;
+  /* padding-left:2rem; */
+  font-weight: 800;
+}
+
+/* HOVER  */
+.exercices .container article:hover{
+  background-size: 170%;
+  background-position: 50% 0;
+}
+.exercices .container  .fiche .annonces:hover{
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* END-HOVER  */
+/* images */
+.exercices .container article.snowmount {
+  background-image: url('../img/html5-css3.jpg');
+}
+
+
+.exercices .container article.elka {
+  background-image: url('../img/veste-blazer-evasee-noir-femme.png');
+}
+.exercices .container article.bladerunner {
+  background-image: url('../adds/bladerunner/img/runner.jpg');
+}
+
+.triangle,.boisson, .euros, .dollar, .perimetre, .kelvin, .serial {
+  background-image: url('../img/javascript.png');
+}
+.ajax {
+  background-image: url('../img/ajax.png');
+}
+.afaire, .encours {
+  background-image: url('../img/javascript.jpg');
+}
+/* LANGAGES */
+
+
+
+@media (max-width:575px) {
+    .exercices .container .fiche{
+        width: 100%;
+        max-width: 100%;
+        margin:1rem;
+        font-size: 1.3rem;
+    }
+}
+@media (min-width:576px) {
+    .exercices .container .fiche{
+        width: 50%;
+        max-width: calc(50% - 2rem);
+        margin:1rem;
+        font-size: 1.3rem;
+        margin:.5rem;
+    }
+}
+@media (min-width:860px) {
+    .exercices .container .fiche{
+        width: 33%;
+        max-width: calc(33% - 2rem);
+        margin:1rem;
+        font-size: 1.1rem;
+        margin:.5rem;
+    }
+}
+@media (min-width:1338px) {
+    .exercices .container .fiche{
+        width: 25%;
+        max-width: calc(25% - 2rem);
+        margin:1rem;
+        font-size: 1.1rem;
+        margin:.5rem;
+    }
+}
+@media (min-width:1500px) {
+    .exercices .container .fiche{
+        width: 250px;
+        height: 250px;
+        max-width: 100%;
+        max-height: 100%;
+    }
+}

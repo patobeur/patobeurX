@@ -1,3 +1,45 @@
+
+function Init() {
+    var query = {
+        login: "cool",
+        pwd: "top"
+    };
+    getAjax("../ink/fortouitter.php", JSON.stringify(query), function (data) {
+        Response(data);
+    });
+}
+function Response(txt) {
+console.log("-" + JSON.stringify(txt));
+if (txt == "ok") {
+console.log("go clearboard()");
+clearboard();
+}else{
+document.getElementById("console").innerHTML = "Error !";
+}
+}
+function getAjax(url, para, success) {
+var xhr = new XMLHttpRequest();
+xhr.open('POST', url);
+xhr.onreadystatechange = function () {       
+document.getElementById("console").innerHTML = "Request :"+ xhr.readyState +"/"+ xhr.status;
+if (xhr.readyState > 3 && xhr.status == 200){
+    success(xhr.responseText);
+} else {
+    // document.getElementById("console").innerHTML = "waiting...";
+}
+};
+xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+xhr.send("data=" + para);
+return xhr;
+}
+function clearboard(){
+document.getElementById("console").innerHTML = "Bravo !";
+}
+Init();
+
+
+
+
 document.addEventListener("DOMContentLoaded", addNewTouit())
     var nbtouit = 0;
     var qui = "#Patobeur";

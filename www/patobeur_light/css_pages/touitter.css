@@ -2,29 +2,9 @@
 .shadows {
     box-shadow: 1px 2px 25px rgba(0, 0, 0, .3);
 }
-
 .touitter {
-    /* top:calc(70px + 2rem); */
-    bottom:0;
-    left:0;
-    right:0;
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(72, 185, 91,.2);
-    justify-content: top;
-    align-content: top;
-    align-items: top;
-    margin: 0;
-    padding: 2%;
 }
 .touitter .touitters {
-    display: flex;
-    flex-direction: column;
-    justify-content: top;
-    align-content: left;
-    align-items: center;
-    background-color: rgb(238, 41, 162);
-    width: 100%;
 }
 
 .touitter .touitters .navigation .menu {
@@ -57,7 +37,7 @@
 }
 @media (min-width:600px) {
     .touitter .touitters #touittzone .fiche {max-width: 33%;}
-    .touitter {padding: 2%;}
+    /* .touitter {padding: 2%;} */
 }
 @media (min-width:1000px) {
     .touitter .touitters #touittzone .fiche {max-width: 20%;}

@@ -9,12 +9,10 @@
     // -----------------------------------------------------------------------------------------------------------------------
 	// One to rule them all ! Or not ;(
     // -----------------------------------------------------------------------------------------------------------------------
-   
-    // OkGen_DOM($Bloc_HTML_json_arr,$Structure_json_arr,'structure',"meta","    ")
 	function Ok_DOM($JSON_ORIG,$JSON_ARR,$koi,$choix,$Origine){
         $CURR_PAGE = OkCurr_Page($JSON_ARR['pages'],$JSON_ARR['defaultpage'][0]);
         $bloc = OkGen_Head($JSON_ARR,$CURR_PAGE,0);
-        $bloc .= OkGen_BODY($CURR_PAGE,$JSON_ORIG,$JSON_ARR,$koi,$choix,0);
+        $bloc .= Gen_BODY($CURR_PAGE,$JSON_ARR,$koi,$choix,0);
         return $bloc;
     }
     // -----------------------------------------------------------------------------------------------------------------------
@@ -139,6 +137,7 @@
                 // break;                                              // on stop ou pas pour chopper la dernier
             }
         }
+        $_SESSION['CURR_PAGE'] = $CURR_PAGE;
         return $CURR_PAGE;
     }
 
@@ -149,19 +148,25 @@
     // un post sympa sur le json et le javascript
     // https: //openclassrooms.com/forum/sujet/jquery-utiliser-un-json-cree-avec-php
 	// -----------------------------------------------------------------------------------------------------------------------
-    function OkGen_BODY($CURR_PAGE,$JSON_ORIG,$JSON_ARR,$koi,$choix,$Origine=0){
+    function Gen_BODY($CURR_PAGE,$JSON_ARR,$koi,$choix,$Origine=0){
         $n=PHP_EOL;$bloc="\n";
         $bloc .= OkSpacer($Origine,1).'<body>'.$n;
         $bloc .= OkSpacer($Origine,2).'<div class="fullpage">'.$n;
         // -------------------------------------- 
-        $rootpassif =  'in/_in_';$pageextension = ".php";            // utiles pour le file_get_contents plus bas
+        $rootpassif =  'in/_in_';
+        $pageextension = ".php";            // utiles pour le file_get_contents plus bas
         // -------------------------------------- 
+
+
+        
+        // ici nbavigation
+        require_once('funky_navigation.php');
+        $bloc .= Navigat($JSON_ARR,'pages');
+
+
+
         // generation des pages a integrer dans le body en dessous de navigation mais en dessus du footer
         // ici je cherche $CURR_PAGE dans le json
-
-
-
-
         // je prend la liste des pages _in_ a intégrer
         $tempovalue = count($JSON_ARR[$CURR_PAGE]['blocs']);
         for ($nbfichier = 0; $nbfichier < $tempovalue; $nbfichier++){
@@ -171,7 +176,11 @@
 
         // en fin de page
         // ouvrir les pages a include a coup sur genre visitor
-        $bloc .= GetPageParLots($JSON_ARR['aouvriratouslescoups']);
+
+
+        $bloc .= GetPageParLots($JSON_ARR['aouvriratouslescoups'],'files');
+
+        
 
         // $bloc .= GetPageParLots($JSON_ARR['actif']);
         // FOOTER
@@ -189,28 +198,28 @@
 
 
 
-    function GetPageParLots($ARRRRAIE){
-        $rootactif2 =  'in/_ink_';
+    function GetPageParLots($ARRRRAIE, $CHILDy){
+        $rootactif2 =  'in/_in_';
         
-        if ($ARRRRAIE['actif']){
-            $tempovalueout = count($ARRRRAIE['files']);
+        // if ($ARRRRAIE['actif']){
+            $tempovalueout = count($ARRRRAIE[$CHILDy]);
             if ($tempovalueout > 0 ){
                 for ($nbfichierout = 0; $nbfichierout < $tempovalueout; $nbfichierout++){
 
-                    if ($ARRRRAIE['files'][$nbfichierout]['page']!="") $ext_file = "ink/funky_".$ARRRRAIE['files'][$nbfichierout]['page'].".php"; // file to include
-                    if ($ARRRRAIE['files'][$nbfichierout]['page']!="") $ink_file = $rootactif2.$ARRRRAIE['files'][$nbfichierout]['page'].".php"; // file to get_contents
-                    if ($ARRRRAIE['files'][$nbfichierout]['aremplacer']!="") $aremplacer = $ARRRRAIE['files'][$nbfichierout]['aremplacer'];
-                    if ($ARRRRAIE['files'][$nbfichierout]['session']!="") $lasesssion = $ARRRRAIE['files'][$nbfichierout]['session'];
-                    if ($ARRRRAIE['files'][$nbfichierout]['require']!="") $require = $ARRRRAIE['files'][$nbfichierout]['require'];
-                    if ($ARRRRAIE['files'][$nbfichierout]['visible']!="") $visible = $ARRRRAIE['files'][$nbfichierout]['visible'];
+                    if ($ARRRRAIE[$CHILDy][$nbfichierout]['page']!="") $ext_file = "ink/funky_".$ARRRRAIE[$CHILDy][$nbfichierout]['page'].".php"; // file to include
+                    if ($ARRRRAIE[$CHILDy][$nbfichierout]['page']!="") $ink_file = $rootactif2.$ARRRRAIE[$CHILDy][$nbfichierout]['page'].".php"; // file to get_contents
+                    if ($ARRRRAIE[$CHILDy][$nbfichierout]['aremplacer']!="") $aremplacer = $ARRRRAIE[$CHILDy][$nbfichierout]['aremplacer'];
+                    if ($ARRRRAIE[$CHILDy][$nbfichierout]['session']!="") $lasesssion = $ARRRRAIE[$CHILDy][$nbfichierout]['session'];
+                    if ($ARRRRAIE[$CHILDy][$nbfichierout]['require']!="") $require = $ARRRRAIE[$CHILDy][$nbfichierout]['require'];
+                    if ($ARRRRAIE[$CHILDy][$nbfichierout]['visible']!="") $visible = $ARRRRAIE[$CHILDy][$nbfichierout]['visible'];
                     // ------------------- DANGER ! ----------------------------------
                     // ici aussi je compte sur le fait que le json est planqué sous www)
                     if ($require) require_once($ext_file); // on appel le fichier demander dans le json (ça craint !!! mais ??? )
-                    if ($visible) return preg_replace($aremplacer, $_SESSION[$lasesssion], file_get_contents($ink_file, TRUE)).$n; // re ça craint )
+                    if ($visible) return preg_replace($aremplacer, $valeurderetour, file_get_contents($ink_file, TRUE)).$n; // re ça craint )
                     // $bloc .= file_get_contents($rootpassif.$ARRRRAIE['blocs'][$nbfichierout].$pageextension,TRUE).$n;
                 }
             }
-        }
+        // }
     }
 
 

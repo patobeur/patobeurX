@@ -1,15 +1,15 @@
 
 /* LANGAGES FLEX */
-.exercices {
+.competences {
   padding: 3rem 0 1rem 0;
   margin: 0;
   /* background-color: rgba(0,0,0,.8); */
-  background-image: url('../img/exercices_bg.jpg');
+  background-image: var(--bgimage2);
   background-size: cover;
   background-position: center top;
   background-attachment: fixed;
 }
-.exercices .container {
+.competences .container {
   padding: 0;
   margin: 0;
   width: 100%;
@@ -18,13 +18,13 @@
     justify-content: center;
     align-items: stretch;
 }
-.exercices h2 {
+.competences h2 {
   font-size: 3rem;
   color:#FFF;
   text-align: center;
   padding: 0 0 1.2rem 0;
 }
-.exercices .container .fiche {
+.competences .container .fiche {
   /* width: 250px;
   height: 250px;
   max-width: 250px;
@@ -40,11 +40,19 @@
   background-position: 50% 50%;
   font-size: 1rem;
 }
-.exercices .container .fiche p {
+.competences .container .fiche p {
   text-align: center;
   padding: 0 1rem 0 1rem;
 }
-.exercices .container .fiche .annonces {
+.competences .container .fiche figure {
+  height: 100%;
+  width:100%;
+  /* background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.competences .container .fiche .annonces {
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.336);
@@ -54,46 +62,67 @@
   text-align: center;
   text-shadow: 5px 0px 5px rgb(0, 0, 0);
 }
-.exercices .container .fiche figure .annonces h3 {
+.competences .container .fiche figure .annonces h3 {
   font-size: 2rem;
   /* padding-left:2rem; */
   font-weight: 800;
 }
 
 /* HOVER  */
-.exercices .container article:hover{
-  background-size: 170%;
-  background-position: 50% 0;
+.competences .container .fiche:hover figure {
+  display: none;
 }
-.exercices .container  .fiche .annonces:hover{
-  background-color: rgba(0, 0, 0, 0.8);
+.competences .container .fiche:hover {
+  display:flex;
+  justify-content: center;
+  align-content: center;
 }
 /* END-HOVER  */
 /* images */
-.exercices .container article.snowmount {
+article.code1 {
   background-image: url('../img/html5-css3.jpg');
 }
-
-
-.exercices .container article.elka {
-  background-image: url('../img/veste-blazer-evasee-noir-femme.png');
+figure.code1 {
 }
-
-.triangle,.boisson, .euros, .dollar, .perimetre, .kelvin, .serial {
+article.code2 {
+  background-image: url('../img/bootstrap4.jpg');
+}
+.code3 {
+  background-image: url('../img/grid.png');
+  background-size: 100%;
+}
+.code4 {
+  background-image: url('../img/flex.png');
+}
+.code5 {
+  background-image: url('../img/bootstrap4.jpg');
+}
+.code5 {
+  background-image: url('../img/sass.png');
+}
+.code6 {
   background-image: url('../img/javascript.png');
 }
-.ajax {
-  background-image: url('../img/ajax.png');
+.code7 {
+  background-image: url('../img/laravel.png');
 }
-.afaire, .encours {
-  background-image: url('../img/javascript.jpg');
+.code8 {
+  background-image: url('../img/XMind-ZEN.png');
+}
+.code9 {
+  background-image: url('../img/XMind-ZEN.png');
+}
+.code10 {
+  background-image: url('../img/feun_portrait_x.jpg');
+  border-radius: 250px;
+  border: 1px solid rgb(255, 255, 255);
 }
 /* LANGAGES */
 
 
 
 @media (max-width:575px) {
-    .exercices .container .fiche{
+    .competences .container .fiche{
         width: 100%;
         max-width: 100%;
         margin:1rem;
@@ -101,7 +130,7 @@
     }
 }
 @media (min-width:576px) {
-    .exercices .container .fiche{
+    .competences .container .fiche{
         width: 50%;
         max-width: calc(50% - 2rem);
         margin:1rem;
@@ -110,7 +139,7 @@
     }
 }
 @media (min-width:860px) {
-    .exercices .container .fiche{
+    .competences .container .fiche{
         width: 33%;
         max-width: calc(33% - 2rem);
         margin:1rem;
@@ -119,7 +148,7 @@
     }
 }
 @media (min-width:1338px) {
-    .exercices .container .fiche{
+    .competences .container .fiche{
         width: 25%;
         max-width: calc(25% - 2rem);
         margin:1rem;
@@ -128,7 +157,7 @@
     }
 }
 @media (min-width:1500px) {
-    .exercices .container .fiche{
+    .competences .container .fiche{
         width: 250px;
         height: 250px;
         max-width: 100%;

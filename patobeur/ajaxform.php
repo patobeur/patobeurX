@@ -1,5 +1,9 @@
 <?php
+$value = '';
 if(isset($_POST) || isset($_POST['data'])){
-    require_once('../../patobeur/ajaxform.php');
+    $query = json_decode($_POST["data"]);
+    if ($query->pwd == md5("Admin") && $query->login =="Admin"){
+        $value = "ok";
+    }
 }
 ?>

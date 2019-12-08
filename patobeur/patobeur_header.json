@@ -34,34 +34,6 @@
 			"lang": "<html lang=\"fr\">"
 		}
 	},
-	"end_js": {
-		"out": [{
-				"typeof": "src",
-				"nameof": "script",
-				"tag": "script",
-				"contentype": "js/jquery-3.4.1.min.js",
-				"item": "type",
-				"contentitem": "text/javascript"
-			},
-			{
-				"typeof": "src",
-				"nameof": "script",
-				"tag": "script",
-				"contentype": "js/bootstrap.bundle.min.js",
-				"item": "type",
-				"contentitem": "text/javascript"
-			},
-			{
-				"typeof": "src",
-				"nameof": "script",
-				"tag": "script",
-				"contentype": "js/devtools.js",
-				"item": "type",
-				"contentitem": "text/javascript"
-			}
-		],
-		"in": [{}]
-	},
 	"head": {
 		"meta": [{
 				"typeof": "charset",
@@ -81,7 +53,15 @@
 				"tag": "meta",
 				"contentype": "description",
 				"item": "content",
-				"contentitem": "Description de ma page"
+				"contentitem": "Exemple de technologie du web. Exemples proposés par Patobeur. Source sur Github"
+			},
+			{
+				"typeof": "name",
+				"nameof": "name",
+				"tag": "meta",
+				"contentype": "keywords",
+				"item": "content",
+				"contentitem": "html, css, javascript, php, ajax, patobeur, aptéo, cefim"
 			},
 			{
 				"typeof": "name",
@@ -111,14 +91,47 @@
 	"defaultpage": [
 		"index"
 	],
+	"pagesext":  {
+		"nommenu": "Dynamique",
+		"nomlabel": "dynamiqueOne",
+		"actif": "true",
+		"files": [
+			{
+				"href": "adds/form-js-ajax-php/",
+				"target": "_self",
+				"title": "Form Ajax"
+			}
+		]
+	},
+	"pagesgestion":  {
+		"nommenu": "Gestion",
+		"nomlabel": "gestionapp",
+		"files": [
+			{
+				"href": "https://www.xmind.net",
+				"target": "out",
+				"title": "X-mind"
+			},
+			{
+				"href": "https://fr.wikipedia.org/wiki/Kanban",
+				"target": "out",
+				"title": "Kan-Ban"
+			},
+			{
+				"href": "https://trello.com",
+				"target": "out",
+				"title": "Trello"
+			}
+		]
+	},
 	"pages": [
 		"index",
 		"ajax",
 		"ajaxelka",
+		"bladerunner",
 		"informations",
 		"touitter",
-		"404",
-		"default"
+		"404"
 	],
 	"aouvriratouslescoups": {
 		"actif": "true",
@@ -128,6 +141,7 @@
 		"actif": "true",
 		"css": [
 			"css/bootstrap.min.css",
+			"css/base.css",
 			"css/style.css",
 			"css/footer.css",
 			"css/surcharge.css",
@@ -138,26 +152,26 @@
 			"js/devtools.js"]
 	},
 	"index": {
+		"title": "Accueil",
 		"actif": "false",
 		"files": [{"visible": "true","require": "true","page": "visitor","aremplacer": "_VISITOR_","session": "TICKET"}],
 		"js": [
-			"js/constantes.js",
-			"js/moneychange.js",
-			"js/perimetre.js",
-			"js/temperature.js",
-			"js/serialcheck.js",
-			"js/boireoucoder.js",
-			"js/triangles.js"
+			"js_exo/constantes.js",
+			"js_exo/moneychange.js",
+			"js_exo/perimetre.js",
+			"js_exo/temperature.js",
+			"js_exo/serialcheck.js",
+			"js_exo/boireoucoder.js",
+			"js_exo/triangles.js"
 		],
 		"css": [
-			"css/cover.css",
-			"css/mooks.css",
-			"css/exercices.css",
-			"css/cefim.css",
-			"css/competences.css"
+			"css_exo/cover.css",
+			"css_exo/mooks.css",
+			"css_exo/exercices.css",
+			"css_exo/cefim.css",
+			"css_exo/competences.css"
 		],
 		"blocs": [
-			"navigation",
 			"landing",
 			"exercices",
 			"carousel",
@@ -165,58 +179,67 @@
 		]
 	},
 	"touitter": {
+		"title": "Touitter",
 		"actif": false,
-		"js": ["js/touitter.js"],
-		"css": ["css/touitter.css"],
+		"js": ["js_pages/touitter.js"],
+		"css": ["css_outils/touitter.css"],
 		"blocs": [
-			"navigation",
 			"touitter",
 			"touit_info"
 		]
 	},
 	"ajaxelka": {
+		"title": "Ajaxelka",
 		"actif": false,
-		"js": ["js/md5.min.js",
-			"js/ajaxelka.js"],
-		"css": ["css/ajaxelka.css"],
+		"js": ["js_pages/md5.min.js",
+			"js_pages/ajaxelka.js"],
+		"css": ["css_outils/ajaxelka.css"],
 		"blocs": [
-			"navigation",
 			"ajaxelka"
 		]
 	},
+	"bladerunner": {
+		"title": "Bladerunner",
+		"actif": false,
+		"js": ["adds/bladerunner/js/bladerunner.js"],
+		"css": ["adds/bladerunner/css/style.css"],
+		"blocs": [
+			"bladerunner"
+		]
+	},
 	"informations": {
+		"title": "Informations",
 		"actif": false,
 		"js": [],
 		"css": [],
 		"blocs": [
-			"navigation",
 			"informations"
 		]
 	},
 	"404": {
+		"title": "404",
 		"actif": false,
 		"js": [],
-		"css": ["css/404.css"],
+		"css": ["css_pages/404.css"],
 		"blocs": [
-			"navigation",
 			"404"
 		]
 	},
 	"ajax": {
+		"title": "Ajax",
 		"actif": false,
-		"js": [],
-		"css": [],
+		"js": ["js_pages/md5_obf.js","js/ajaxelka.js"],
+		"css": ["css/cover.css"],
 		"blocs": [
-			"navigation",
 			"ajax"
 		]
 	},
 	"default": {
+		"title": "default",
 		"actif": false,
 		"js": [],
 		"css": [],
 		"blocs": [
-			"navigation",
 			"404"
 		]
 	},
