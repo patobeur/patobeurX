@@ -131,8 +131,10 @@
 	},
 	"pages": [
 		"index",
+		"ajaxelka",
 		"bladerunner",
 		"touitter",
+		"touitteur",
 		"404"
 	],
 	"aouvriratouslescoups": {
@@ -178,6 +180,16 @@
 			"exercices",
 			"carousel",
 			"mooks"
+		]
+	},
+	"touitteur": {
+		"title": "Touitteur",
+		"actif": false,
+		"js": ["js_pages/touitteur.js"],
+		"css": ["css_pages/touitteur.css"],
+		"blocs": [
+			"touitteur",
+			"touit_info2"
 		]
 	},
 	"touitter": {

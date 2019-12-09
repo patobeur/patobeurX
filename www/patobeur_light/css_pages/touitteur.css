@@ -1,0 +1,92 @@
+/* Définition des effets */
+.shadows {
+    box-shadow: 1px 2px 25px rgba(0, 0, 0, .3);
+}
+
+.touitter .touitters .navigation .menu {
+    border: 1px solid red;
+    border-radius: 7px;
+    background-color: white;
+    padding: 0 1rem;
+    margin: 0 2rem;
+}
+.touitter .touitters .navigation{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(79, 67, 243, 0.473);
+}
+
+
+.touitter .touitters #touittzone {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.touitter .touitters #touittzone .fiche {
+    width: 100%;
+    padding: .1rem;
+    border-radius: 7px;
+    height: 7rem;
+    overflow: hidden;
+}
+.touitter .touitters #touittzone .fiche:hover {
+    height: auto;
+}
+@media (min-width:600px) {
+    .touitter .touitters #touittzone .fiche {max-width: 33%;}
+    /* .touitter {padding: 2%;} */
+}
+@media (min-width:1000px) {
+    .touitter .touitters #touittzone .fiche {max-width: 20%;}
+}
+@media (min-width:1300px) {
+        .touitter .touitters #touittzone .fiche {width:calc(100% / 6)}
+}
+.touitter .touitters #touittzone .fiche .fichetouit {
+    background-color: rgba(255, 255, 255, 0.575);
+    border-radius: 7px;
+    padding: .5rem;
+    margin: .1rem;
+}
+.touitter .touitters #touittzone .fiche .fichetouit h3 {
+    font-size: 1.2rem;
+    padding: .5rem;
+    margin: .1rem;
+    outline: 1px solid black;
+}
+.touitter .touitters #touittzone .fiche .fichetouit p {
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+}
+
+
+#consoleajax {
+    position: absolute;
+    top:120px;
+    right:5px;
+    width:max-content;
+    background-color: #EAEAEA;
+    margin: 0;
+    margin: 1rem;
+    border-radius: 7px;
+}
+.joker2 {
+    background-color: #EAEAEA;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: 0;
+}
+.touitter .touitters .formulaire {
+    width:100%;
+
+
+} 
