@@ -17,7 +17,7 @@ require_once('_Db_User.php');
         $message='&message='. $_GET['message'];
     }
     
-    $poster = 'http://touiteur.cefim-formation.org/send'.$name.$message;
+    $poster = ''.$name.$message;
 
 
 
