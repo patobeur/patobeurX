@@ -17,10 +17,6 @@ require_once('_Db_User.php');
         $message='&message='. $_GET['message'];
     }
     
-    
-
-
-
     //$user_login = new USER();
 
 
