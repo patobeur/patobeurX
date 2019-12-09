@@ -8,11 +8,11 @@
                     </div>
                     
                     <div class="formulaire">
-                        <input id="pseudo" type="text">
-                        <input id="message" type="textarea">
+                        <input id="pseudo" type="text" value="Pato'">
+                        <input id="message" type="textarea" value="From Outer Space">
                         <button id="sandmessage" class="menu">Sand...</button>
-                        <input id="one" type="text" value="">
-                        <input id="two" type="text" value="">
+                        <input id="one" type="text" value="" placeholder="readyState reporting...">
+                        <input id="two" type="text" value="" placeholder="status reporting...">
                         <input id="three" type="text" value="">
                     </div>
                     

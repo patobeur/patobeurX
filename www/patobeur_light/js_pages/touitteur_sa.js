@@ -3,18 +3,21 @@
 var compteuse = 0;
 var Pseudo = document.getElementById("pseudo").value;
 var Message = document.getElementById("message").value;
-var elt = document.getElementById("sandmessage");
-elt.onclick = function (e) {
+
+document.querySelector('#sandmessage').addEventListener("click", function(){ 
     if (Pseudo && Pseudo != "" && Message && Message != ""){
+    console.log(Pseudo + " " +Message);
         sendmessage(Pseudo,Message);
     }
-};
+}); 
+
 
 function sendmessage(pseudo,message){
-    EnvoyerUnMessage("ink/redir_api_touitter.php", [pseudo,message], function (data) {
-    // Get_Les_Fiches("ink/patobeurjson.php", '', function (data) {
-        JaiLaReponse(data);
-    });
+    let Url = "ink/redir_api_touitter.php";
+    EnvoyerUnMessage(Url, [pseudo,message], function (data) {
+            JaiLaReponse(data);
+        }
+    );
 }
 // ----------------------------------------------------------------
 function EnvoyerUnMessage(url, para, success) {
@@ -22,52 +25,56 @@ function EnvoyerUnMessage(url, para, success) {
     let message2 = '';
     var PAQUET = new XMLHttpRequest();
     PAQUET.open('POST', url);
+    console.log("post");
+
     PAQUET.onreadystatechange = function () {
         // debug
-        switch (xhr.readyState) {
+        switch (PAQUET.readyState) {
             case 4:
-                message = "c'est bon là ? (" + xhr.readyState + ")";
+                message = "c'est bon là ? (" + PAQUET.readyState + ")";
                 break;
             case 3:
-                message = "Kesako ! (" + xhr.readyState + ")";
+                message = "Kesako ! (" + PAQUET.readyState + ")";
                 break;
             case 2:
-                message = "Kesako ! (" + xhr.readyState + ")";
+                message = "Kesako ! (" + PAQUET.readyState + ")";
                 break;
             case 1:
-                message = "Kesako ! (" + xhr.readyState + ")";
+                message = "Kesako ! (" + PAQUET.readyState + ")";
                 break;
             default:
-                message = "Hum !?! (" + xhr.readyState + ")";
+                message = "Hum !?! (" + PAQUET.readyState + ")";
                 break;
         }
-        switch (xhr.status) {
+        switch (PAQUET.status) {
             case "":
-                message2 = "Vide ? Ce n'est pas normal ? (" + xhr.status + ")";
+                message2 = "Vide ? Ce n'est pas normal ? (" + PAQUET.status + ")";
                 break;
             case 500:
-                message2 = "Bug dans le fichier appelé... (" + xhr.status + ")";
+                message2 = "Bug dans le fichier appelé... (" + PAQUET.status + ")";
                 break;
                 case 404:
-                    message2 = "Le fichier appelé n'est pas abonné... (" + xhr.status + ")";
+                    message2 = "Le fichier appelé n'est pas abonné... (" + PAQUET.status + ")";
                     break;
                 case 200:
-                    message2 = "C'est good ?? (" + xhr.status + ")";
+                    message2 = "C'est good ?? (" + PAQUET.status + ")";
                     break;
             default:
-                message2 = "Hum !?! (" + xhr.status + ")";
+                message2 = "Hum !?! (" + PAQUET.status + ")";
                 break;
         }
-        document.getElementById("one").innerHTML = message;
-        document.getElementById("two").innerHTML = message2;
+        document.querySelector('#one').innerHTML = message;
+        document.querySelector('#two').innerHTML = message2;
 
         if (PAQUET.readyState > 3 && PAQUET.status == 200) {
             success(PAQUET.responseText);
         }
     };
     PAQUET.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    console.log( url + "?name=" + para[0] + "message=" + para[1]);
-    PAQUET.send("ip=" + para[0] + "message=" + para[1]);
+    // PAQUET.setRequestHeader("Content-Type", "multipart/form-data");
+    // PAQUET.setRequestHeader("Content-Type", "text/plain");
+    console.log( url + "?name=" + para[0] + "&message=" + para[1]);
+    PAQUET.send("name=" + para[0] + "message=" + para[1]);
     return PAQUET;
 }
 function JaiLaReponse(Paquet) {
@@ -75,7 +82,7 @@ function JaiLaReponse(Paquet) {
     // if (Paquet && Paquet.length > 0 ) {
         document.getElementById('three').innerHTML = Paquet.length + " lettre(s)";
         // console.log(JSON.parse(Paquet));
-        console.log(Paquet);
+        console.log("retour: "+Paquet);
     // }
 }
 
@@ -205,81 +212,3 @@ function Get_Les_Fiches(url, para, success) {
 
 
 
-
-
-document.addEventListener( "DOMContentLoaded", addNewTouit() );
-var nbtouit = 0;
-var qui = "#Patobeur";
-// -----------------------------------------------------------------------------------
-function addNewTouit() {
-    // waiting for refresh json content
-    document.getElementById('retourdebaton').innerHTML = "ok";
-
-    var NewTouiit = document.querySelector("#newtouit");
-    NewTouiit.addEventListener("click", clikage);
-}
-
-function clikage() {
-    nbtouit++;
-    // var query = {one: null,two: null};
-    var divtest = document.createElement("div");
-    divtest.className = "fiche";
-    rgbautoT(divtest);
-    divtest.innerHTML = creatTouit(qui, fauxtext(hitdice(5, 25)), nbtouit, 'fichetouit', '');
-
-    var objTo = document.querySelector('#touittzone');
-    objTo.insertBefore(divtest, objTo.childNodes[0]);
-}
-
-// -----------------------------------------------------------------------------------
-function creatTouit(qui, message, nbtouit, classe, ide) {
-    //date et heure du touiite ??
-    if (ide != '') {
-        ide = ' id="' + ide + '"';
-    }
-    if (classe != '') {
-        classe = ' class="' + classe + '"';
-    }
-    document.getElementById('retourdebaton').innerHTML = nbtouit + " déjà touités";
-    return '<div' + ide + classe + '><h1>#' + nbtouit + "/" + qui + '</h1><p>' + message + '</p><p></p></div>';
-
-}
-// -----------------------------------------------------------------------------------
-function fauxtext(nbword) {
-    var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-    var phrase = '';
-    for (i = 0; i < nbword; i++) {
-        nblettre = hitdice(2, 9);
-        for (j = 0; j < nblettre; j++) {
-            phrase += alphabet[hitdice(0, 15)];
-        }
-        phrase += " ";
-    }
-    phrase += ".";
-    return phrase;
-}
-
-function hitdice(min, max) {
-    return Math.floor(Math.random(min) * Math.floor(max));
-}
-// -----------------------------------------------------------------------------------
-function rgbauto() {
-    return 'rgb(' + hitdice(0, 255) + ',' + hitdice(0, 255) + ',' + hitdice(0, 255) + ')';
-}
-
-function rgbautoT(objet) {
-    let R = hitdice(0, 255);
-    let V = hitdice(0, 255);
-    let B = hitdice(0, 255);
-    let Nuance = R + V + B;
-    let couleur = 'rgba(' + R + ',' + V + ',' + B + ')';
-    objet.style.backgroundColor = couleur;
-    if (R < 180 && V < 180 && B < 180) {
-        objet.style.color = "white";
-    }
-    let elementa = document.createElement('p');
-    elementa.innerHTML = couleur;
-    objet.appendChild(elementa);
-}
-
-LectureFiches();
