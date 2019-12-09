@@ -17,6 +17,7 @@ body {
   background-size: cover;
   background-position: center top;
   background-attachment: fixed;
+  font-size: 1.4rem;
 }
 .full-page {
   width: 100%;
@@ -26,6 +27,7 @@ body {
   background-size: cover;
   background-position: center top;
   background-attachment: fixed;
+  padding-bottom:2rem;
 }
 /* NAVBAR */
 .full-page header nav .container {
@@ -35,48 +37,10 @@ body {
 .bg-black {
   background-color: var(--bgc-black);
 }
-@media (max-width:320px) {
-  .logo {
-      /* max-width: 540px */
-      max-width: 100%
-  }
-  .navbar-brand {
-      padding:0;
-      margin-right: 0;
-      max-width: 160px
-  }
-}
-@media (max-width:576px) {
-  .navbar-brand {
-      /* padding-top: .3125rem;
-      padding-bottom: .3125rem; 
-      white-space: nowrap*/
-      margin-right: 0;
-  }
-  .langages .container .fiche figure {
-    display: none;
-  }
-  .langages .container .fiche {
-    display:flex;
-    justify-content: center;
-    align-content: center;
-    outline: 1px solid rgb(255, 255, 255);
-  }
-}
 /* FIN-NAVBAR */
 
 
 
-
-
-.fullpage{
-  padding-top:100px;
-}
-@media (max-width:700px) {
-  .fullpage {
-      padding-top:0;
-  }
-}
 
 
 

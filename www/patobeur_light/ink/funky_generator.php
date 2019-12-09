@@ -199,6 +199,7 @@
 
 
     function GetPageParLots($ARRRRAIE, $CHILDy){
+        $n=PHP_EOL;
         $rootactif2 =  'in/_in_';
         
         // if ($ARRRRAIE['actif']){

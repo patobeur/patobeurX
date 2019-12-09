@@ -1,29 +1,27 @@
-            <!-- COVER -->
-            <section class="heroman">
-                <h1>
-                Exercices AJAX
-                </h1>
-
-                <div class="container">
-                    <article class="fiche ajax" href="#">
-                        <div id="ajax" class="annonces">
-                            <div class="FormConect conection">
-                                <h3>HotPass !</h3>
-                                <label for="" class="lablogin">Votre identifiant</label>
-                                <input id="identifiant" type="text" class="identifiant" placeholder="" value=Admin><br />
-                                <label for="" class="labpassword">Votre mot de passe</label>
-                                <input id="motdepasse" type="password" class="motdepasse" placeholder="" value=Admin><br />
-                                <button id="wlogin" class="starter">login</button>
-                                <div id="return"></div>
-                                <a href="http://aspirine.org/htpasswd.html">mal au crâne ? aspirine.org</a>
-                            </div>
-                            <script src="js/md5.min.js" type="text/javascript"></script>
-                            <script src="js/ajaxform.js" type="text/javascript"></script>
-                            <script>
-                                Init();
-                            </script>
+            <!-- ELKA -->
+            <div class="container outlined">
+                <div class="formulaire-contact shadows outlined">
+                    <div class="form-visuel outlined"></div>
+                    <div class="form-page">
+                        <div id="finish" class="formulaire">
+                            <h1>Welcome to You !</h1>
+                            <p>Join our community that have more than 10000 subscribers and learn new things everyday !</p>
+                            <input id="identifiant" class="email shadows" name="mail" type="text" value="Admin">
+                            <input id="motdepasse" class="word shadows" name="word" type="password" value="Admin">
+                            <label for="mail shadows" class="label-email">Email</label>
+                            <label for="word" class="label-word">Password</label>
+                            <label for="fun" class="label-forget"><a href="#">forget ?</a></label>
+                            <button id="wlogin" class="soumission">Login</button>
+                            <div id="ninfo"></div>
+                            <div id="readyState"></div>
+                            <div id="status"></div>
+                            <div class="form-footer"><p><a href="#">Don't have account?</a></p></div>
+                            <script src="js/elka_obf.js" type="text/javascript"></script>
+                            <script src="js/md5_obf.js" type="text/javascript"></script>
+                            
+                            <div id="status"><a href="https://github.com/patobeur/patobeur/tree/master/www/patobeur_light/adds/form-js-ajax-php">source Github !</a></div>
                         </div>
-                    </article>
+                    </div>
                 </div>
-            </section>
-            <!-- END-COVER -->
+            </div>
+            <!-- END-ELKA -->

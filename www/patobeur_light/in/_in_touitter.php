@@ -1,5 +1,5 @@
             <!-- toO-it -->
-            <div class="touitter">
+            <div class="touitter patotop">
                 <div class="touitters shadows outlined">
                     <div class="navigation">
                         <button id="newtouit" class="menu">NEW TOUIT</button>

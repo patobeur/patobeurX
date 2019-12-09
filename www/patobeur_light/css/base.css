@@ -127,7 +127,3 @@ address {
   border: 0;
   text-shadow: none;
 }
-
-[class^=nav] {
-  outline: 1px solid red;
-}

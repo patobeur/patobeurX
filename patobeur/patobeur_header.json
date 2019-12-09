@@ -92,19 +92,19 @@
 		"index"
 	],
 	"pagesext":  {
-		"nommenu": "Dynamique",
+		"nommenu": "Exercices",
 		"nomlabel": "dynamiqueOne",
 		"actif": "true",
 		"files": [
 			{
 				"href": "adds/form-js-ajax-php/",
-				"target": "_self",
-				"title": "Form Ajax"
+				"target": "_out",
+				"title": "Elka Ajax"
 			},
 			{
-				"href": "http://apteo.org/patobeur/ink/redirtouitter.php",
+				"href": "adds/bladerunner/",
 				"target": "_out",
-				"title": "Json en test"
+				"title": "Bladerunner"
 			}
 		]
 	},
@@ -131,10 +131,7 @@
 	},
 	"pages": [
 		"index",
-		"ajax",
-		"ajaxelka",
 		"bladerunner",
-		"informations",
 		"touitter",
 		"404"
 	],
@@ -207,18 +204,9 @@
 		"title": "Bladerunner",
 		"actif": false,
 		"js": ["adds/bladerunner/js/bladerunner.js"],
-		"css": ["adds/bladerunner/css/style.css"],
+		"css": ["adds/bladerunner/css/style.css","css_pages/bladerunner_surcharge.css"],
 		"blocs": [
 			"bladerunner"
-		]
-	},
-	"informations": {
-		"title": "Informations",
-		"actif": false,
-		"js": [],
-		"css": [],
-		"blocs": [
-			"informations"
 		]
 	},
 	"404": {
@@ -226,24 +214,6 @@
 		"actif": false,
 		"js": [],
 		"css": ["css_pages/404.css"],
-		"blocs": [
-			"404"
-		]
-	},
-	"ajax": {
-		"title": "Ajax",
-		"actif": false,
-		"js": ["js_pages/md5_obf.js","js/ajaxelka.js"],
-		"css": ["css/cover.css"],
-		"blocs": [
-			"ajax"
-		]
-	},
-	"default": {
-		"title": "default",
-		"actif": false,
-		"js": [],
-		"css": [],
 		"blocs": [
 			"404"
 		]

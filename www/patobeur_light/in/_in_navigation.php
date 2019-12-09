@@ -1,7 +1,7 @@
             <!-- HEADER -->
             <header>
                 <!-- navigation -->
-                <nav class="navbar navbar-expand-md bg-black navbar-light main-nav fixed-top">
+                <nav class="navbar navbar-expand-md bg-black navbar-light main-nav">
                     <div class="container">
                         <a class="navbar-brand" href="http://apteo.org/patobeur/" title="Logo de patobeur">
                             <img

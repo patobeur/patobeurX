@@ -1,29 +1,26 @@
-/* Définition des effets */
-.shadows {
-    box-shadow: 1px 2px 25px rgba(0, 0, 0, .3);
-}
 
-.elkacontainer {
-    background-color: #EAEAEA;
+.elka {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0;
     height: 100vh;
+    font-size:1.6rem;
 }
-
 .formulaire-contact {
     display: grid;
     grid-template-columns: 40% 5% 40% 5% 10%;
     width: calc(100vw - 5rem);
     height: calc(100vh - 5rem);
+
     /* width: 100px;height: 100%; */
+    background-color: #ffffff;
 }
 
 /*  4 blocs à mettre en grid  */
 .form-visuel {
-    background-image: url(../img/veste-blazer-evasee-noir-femme.png);
+    background-image: url(../adds/form-js-ajax-php/img/debiessolene.jpg);
     background-size: cover;
     background-position: center center;
     grid-column: 1 / 2;
@@ -46,12 +43,16 @@
     grid-row: 3;
 }
 
+/* Définition des effets */
+.shadows {
+    box-shadow: 1px 2px 25px rgba(0, 0, 0, .3);
+}
 /* Contenus de form-footer */
-.form-footer p {
-    color: #707070;
+/* .form-footer p {
+    color: var(--grey-dark);
     font-size: .8rem;
     margin: 0 0 0 2rem;
-}
+} */
 
 /* Contenus de form-btn */
 .form-btn a {
@@ -72,7 +73,7 @@
 }
 
 .form-page .formulaire h1 {
-    color: #707070;
+    color: var(--grey-dark);
     text-transform: uppercase;
     font-size: 1.8rem;
     /* white-space: nowrap; */
@@ -100,7 +101,7 @@
     font-size: .7rem;
     left: 7px;
     bottom: 72px;
-    color: rgb(199, 199, 199);
+    color: var(--grey);
     visibility: visible;
 }
 
@@ -110,7 +111,7 @@ input {
     height: 3rem;
     font-size: .9rem;
     /* outline:1px solid black; */
-    color: rgb(199, 199, 199);
+    color: var(--grey);
     margin: 0;
 }
 
@@ -144,10 +145,16 @@ input {
     padding: 0;
     margin-left: auto;
     border: 0;
+    background-image: url('../adds/form-js-ajax-php/img/elkalogin.svg');
+    background-size: cover;
+    background-position: center center;
+    width: 110px;
+    height: 35px;
+    background-color: none;
 }
 
 .soumission::after {
-    background-image: url('../img/submit.png');
+    background-image: url('../adds/form-js-ajax-php/img/elkalogin.svg');
     background-size: 20px 20px;
     background-position: bottom left;
     display: inline-block;
@@ -195,7 +202,6 @@ input {
         grid-column: 1 / 6;
         grid-row: 1 / 5;
         margin: 1rem 1em .5em 1em;
-        background-color: rgba(0, 0, 0, 0.09);
         display: flex;
         justify-content: center;
         text-align: center;
@@ -210,13 +216,13 @@ input {
         font-size: 3rem;
         color: #000;
         font: 1px 2px 25px rgb(255, 255, 255);
-        color:#FFF;
+        color:rgb(0, 0, 0);
     }
     .form-page .formulaire p {
         padding: .5rem 1rem 2rem 1rem;
         margin: 0;
         font-size: 1.1rem;
-        color:#FFF;
+        color:rgb(0, 0, 0);
     }
 
     .form-footer {
