@@ -1,7 +1,6 @@
 <?php
-    class Database{
-        private $MyDomaineAMoi = "";             
-        if ($_SERVER['HTTP_HOST'] == $MyDomaineAMoi){
+    class Database{           
+        if ($_SERVER['HTTP_HOST'] == ''){
           private $host = "";
           private $db_name = "";
           private $username = "";
