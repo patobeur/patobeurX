@@ -6,7 +6,7 @@
           private $username = "";
           private $password = "";
         }
-        elseif $_SERVER['HTTP_HOST'] == 'localhost'){
+        elseif ($_SERVER['HTTP_HOST'] == 'localhost'){
           private $host = "localhost";
           private $db_name = "";
           private $username = "";
