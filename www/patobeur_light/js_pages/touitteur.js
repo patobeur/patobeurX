@@ -109,16 +109,19 @@ function SEND_POST_TOUIT(url, para, success) {
         // debug
         switch (PAQUET.readyState) {
             case 4:
-                message = "c'est bon là ? (" + PAQUET.readyState + ")";
+                message = "DONE ! (" + PAQUET.readyState + ")";
                 break;
             case 3:
-                message = "Kesako ! (" + PAQUET.readyState + ")";
+                message = "LOADING ! (" + PAQUET.readyState + ")";
                 break;
             case 2:
-                message = "Kesako ! (" + PAQUET.readyState + ")";
-                break;
+                message = "HEADERS_RECEIVED ! (" + PAQUET.readyState + ")";
+            break;
             case 1:
-                message = "Kesako ! (" + PAQUET.readyState + ")";
+                message = "OPENED ! (" + PAQUET.readyState + ")";
+                break;
+            case 0:
+                message = "UNSENT ! (" + PAQUET.readyState + ")";
                 break;
             default:
                 message = "Hum !?! (" + PAQUET.readyState + ")";
