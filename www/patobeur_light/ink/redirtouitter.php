@@ -1,5 +1,5 @@
 <?php
-    require_once('../../../patobeur/touitter.php');
+    require_once('../../../patobeur/api_touitter.php');
     if ($retourtouitter){
         header('Content-Type: application/json');
         echo $retourtouitter;

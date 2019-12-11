@@ -1,0 +1,28 @@
+#Touitties {
+    display:flex;
+    outline: 1px solid rgba(0, 0, 0, 0.473);
+    background-color: #fff;
+    box-shadow: 1px 2px 25px rgba(0, 0, 0, .3);
+}
+.row_touitties{
+
+}
+.item_touitties{
+
+}
+
+
+
+
+
+
+
+
+
+.formulaire {
+    
+    display:flex;
+    outline: 1px solid rgba(0, 0, 0, 0.473);
+    box-shadow: 1px 2px 25px rgba(0, 0, 0, .3);
+    background-color: rgba(255, 255, 255, 0.616);
+}

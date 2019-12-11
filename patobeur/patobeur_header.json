@@ -105,6 +105,11 @@
 				"href": "adds/bladerunner/",
 				"target": "_out",
 				"title": "Bladerunner"
+			},
+			{
+				"href": "adds/superapp/",
+				"target": "_out",
+				"title": "SuperApp"
 			}
 		]
 	},

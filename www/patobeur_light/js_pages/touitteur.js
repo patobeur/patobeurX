@@ -1,61 +1,144 @@
 //sendeur
+document.addEventListener( "DOMContentLoaded", addNewTouit() );
+// -----------------------------------------------------------------------------------
+function addNewTouit() {  
+    var nbtouit = 0;
+    var qui = "#Patobeur";
+    document.getElementById('retourdebaton').style.backgroundColor = "white";
 
-var compteuse = 0;
-var Pseudo = document.getElementById("pseudo").value;
-var Message = document.getElementById("message").value;
-var elt = document.getElementById("sandmessage");
-elt.onclick = function (e) {
-    if (Pseudo && Pseudo != "" && Message && Message != ""){
-        sendmessage(Pseudo,Message);
-    }
-};
+    var nbfiches = GET_FICHE_ALL();
+    const start = Date.now();
+    var compteuse = 0;
 
-function sendmessage(pseudo,message){
-    EnvoyerUnMessage("ink/redir_api_touitter.php", [pseudo,message], function (data) {
-    // Get_Les_Fiches("ink/patobeurjson.php", '', function (data) {
-        JaiLaReponse(data);
+    var NewTouiit = document.querySelector("#newtouit");
+    NewTouiit.addEventListener("click", FauxTouitte);
+    // Nouveau message
+    var NewMESSAGE = document.getElementById("sandmessage");
+    NewMESSAGE.onclick = function (e) {
+        var Pseudo = document.getElementById("name").value;
+        var Message = document.getElementById("message").value;
+        if (Pseudo && Pseudo != "" && Message && Message != ""){
+            Pseudo = document.getElementById("name").value;
+            Message = document.getElementById("message").value;
+            SEND_ONE_FICHE(Pseudo,Message);
+        }
+    };
+    var FauxMessageBTN = document.getElementById("fauxmess");
+    FauxMessageBTN.onclick = function (e) {
+        FauxMessage();
+    };
+}
+// -----------------------------------------------------------------------------------
+function SEND_ONE_FICHE(pseudo,message){    
+    SEND_POST_TOUIT("ink/redirtouitteur.php", [pseudo,message], function (data) {
+        GET_FICHE_ALL(data);
+    });
+}// -----------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------
+function GET_FICHE_ALL() {
+    document.querySelector('#touittzone').innerHTML = "Lecture des fiches !";
+    GET_POST_FICHE_ALL("ink/redirtouitter.php", '', function (data) {
+        return Jai_Une_Reponse(data);
     });
 }
-// ----------------------------------------------------------------
-function EnvoyerUnMessage(url, para, success) {
+// -----------------------------------------------------------------------------------
+function Jai_Une_Reponse(Paquet) {
+        document.getElementById('status').innerHTML = Paquet.length+" lettre(s)";
+        var NewPaquet = JSON.parse(Paquet);
+        
+        // if (Paquet && Paquet.length > 0) {
+            document.getElementById('readyState').innerHTML = NewPaquet['messages'].length+" Fiche(s)";
+            //var acteurs = lesacteurs(Paquet);
+            for (i = 0; i < NewPaquet['messages'].length; i++){
+                IncommingCreator(NewPaquet['messages'],i);
+            }
+        // }
+        return Paquet.length;
+}
+function FauxTouitte() {
+    nbtouit++;
+    // var query = {one: null,two: null};
+    var divtest = document.createElement("div");
+    divtest.className = "fiche";
+    divtest.innerHTML = creatTouit(qui, fauxtext(HitDice(5, 25)), nbtouit, 'fichetouit', '');
+
+    var objTo = document.querySelector('#touittzone');
+    objTo.insertBefore(divtest, objTo.childNodes[0]);
+}
+
+function FauxMessage() {
+    document.querySelector('#name').value = fauxtext(HitDice(1, 10))
+    document.querySelector('#message').value = fauxtext(HitDice(1, 10))
+}
+
+// -----------------------------------------------------------------------------------
+function creatTouit(qui, message, nbtouit, classe, ide) {
+    //date et heure du touiite ??
+    if (ide != '') {
+        ide = ' id="' + ide + '"';
+    }
+    if (classe != '') {
+        classe = ' class="' + classe + '"';
+    }
+    document.getElementById('retourdebaton').innerHTML = nbtouit + " déjà touités";
+    return '<div' + ide + classe + '><h1>#' + nbtouit + "/" + qui + '</h1><p>' + message + '</p><p></p></div>';
+
+}
+// -----------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------------
+function heure()
+{
+        var date = new Date();
+        var heure = date.getHours();
+        var minutes = date.getMinutes();
+        if(minutes < 10)
+            minutes = "0" + minutes;
+        return heure + "h" + minutes;
+}
+// -----------------------------------------------------------------------------------
+function SEND_POST_TOUIT(url, para, success) {
     let message = '';
     let message2 = '';
     var PAQUET = new XMLHttpRequest();
     PAQUET.open('POST', url);
     PAQUET.onreadystatechange = function () {
         // debug
-        switch (xhr.readyState) {
+        switch (PAQUET.readyState) {
             case 4:
-                message = "c'est bon là ? (" + xhr.readyState + ")";
+                message = "c'est bon là ? (" + PAQUET.readyState + ")";
                 break;
             case 3:
-                message = "Kesako ! (" + xhr.readyState + ")";
+                message = "Kesako ! (" + PAQUET.readyState + ")";
                 break;
             case 2:
-                message = "Kesako ! (" + xhr.readyState + ")";
+                message = "Kesako ! (" + PAQUET.readyState + ")";
                 break;
             case 1:
-                message = "Kesako ! (" + xhr.readyState + ")";
+                message = "Kesako ! (" + PAQUET.readyState + ")";
                 break;
             default:
-                message = "Hum !?! (" + xhr.readyState + ")";
+                message = "Hum !?! (" + PAQUET.readyState + ")";
                 break;
         }
-        switch (xhr.status) {
+        switch (PAQUET.status) {
             case "":
-                message2 = "Vide ? Ce n'est pas normal ? (" + xhr.status + ")";
+                message2 = "Vide ? Ce n'est pas normal ? (" + PAQUET.status + ")";
                 break;
             case 500:
-                message2 = "Bug dans le fichier appelé... (" + xhr.status + ")";
+                message2 = "Bug dans le fichier appelé... (" + PAQUET.status + ")";
                 break;
                 case 404:
-                    message2 = "Le fichier appelé n'est pas abonné... (" + xhr.status + ")";
+                    message2 = "Le fichier appelé n'est pas abonné... (" + PAQUET.status + ")";
                     break;
                 case 200:
-                    message2 = "C'est good ?? (" + xhr.status + ")";
+                    message2 = "C'est good ?? (" + PAQUET.status + ")";
                     break;
             default:
-                message2 = "Hum !?! (" + xhr.status + ")";
+                message2 = "Hum !?! (" + PAQUET.status + ")";
                 break;
         }
         document.getElementById("one").innerHTML = message;
@@ -66,58 +149,40 @@ function EnvoyerUnMessage(url, para, success) {
         }
     };
     PAQUET.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    console.log( url + "?name=" + para[0] + "message=" + para[1]);
-    PAQUET.send("ip=" + para[0] + "message=" + para[1]);
+    console.log('js:' + url + "?name=" + para[0] + "&message=" + para[1]);
+    PAQUET.send("name=" + para[0] + "&message=" + para[1] + "[" + heure() + "]");
     return PAQUET;
 }
-function JaiLaReponse(Paquet) {
-    // Paquet = JSON.parse(Paquet);
-    // if (Paquet && Paquet.length > 0 ) {
-        document.getElementById('three').innerHTML = Paquet.length + " lettre(s)";
-        // console.log(JSON.parse(Paquet));
-        console.log(Paquet);
-    // }
+// -----------------------------------------------------------------------------------
+function quialea(){    
+    let auteurs = [
+        'Pato',
+        'C.A.R. Hoare',
+        'Auteur Inconnu',
+        'Gerald Weinberg',
+        'Edsger Dijkstra',
+        'Jeremy S. Anderson'
+    ];
+    let phrases = [
+        'From Outer Spaces',
+        'Il y existe deux manières de concevoir un logiciel. La première, c’est de le faire si simple qu’il est évident qu’il ne présente aucun problème. La seconde, c’est de le faire si compliqué qu’il ne présente aucun problème évident. La première méthode est de loin la plus complexe',
+        'Le fossé séparant théorie et pratique est moins large en théorie qu’il ne l’est en pratique',
+        'Si les ouvriers construisaient les bâtiments comme les développeurs écrivent leurs programmes, le premier pivert venu aurait détruit toute civilisation',
+        'Si debugger, c’est supprimer des bugs, alors programmer ne peut être que les ajouter',
+        'Les deux principales inventions sorties de Berkeley sont UNIX et le LSD. Difficile de croire à une quelconque coïncidence'
+    ];
+    let N = HitDice(0,phrases.length);
+    console.log(N);
+    document.querySelector("#name").value = auteurs[N];
+    document.querySelector("#message").innerHTML = phrases[N];
 }
+// -----------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-function LectureFiches() {
-    Get_Les_Fiches("ink/redirtouitter.php", '', function (data) {
-    // Get_Les_Fiches("ink/patobeurjson.php", '', function (data) {
-        Jai_Une_Reponse(data);
-    });
-}
-function Jai_Une_Reponse(Paquet) {
-    // 1er palier
-    // Paquet = JSON.parse(Paquet);
-    // if (Paquet && Paquet.length > 0 ) {
-        document.getElementById('status').innerHTML = Paquet.length+" lettre(s)";
-        LetGoGoGO(JSON.parse(Paquet));
-    // }
-}
-function LetGoGoGO(Paquet) {
-    // if (Paquet && Paquet.length > 0) {
-        document.getElementById('readyState').innerHTML = Paquet['messages'].length+" Fiche(s)";
-        
-        //var acteurs = lesacteurs(Paquet);
-
-        for (i = 0; i < Paquet['messages'].length; i++){
-            IncommingCreator(Paquet['messages'],i);
-        }
-    // }
-}
+// -----------------------------------------------------------------------------------
 // function lesacteurs(Paquet){
 //     Paquet = Paquet['messages'];
 //     var names = ["moi"];
@@ -142,18 +207,19 @@ function LetGoGoGO(Paquet) {
 //     }
 //     return names;
 // }
-
-
+// ----------------------------------------------------------------
 function IncommingCreator(fiche,num) {
     fiche = fiche[num];
     //date et heure du touiite ??
 
     var divtestin = document.createElement("div");
     divtestin.className = 'fichetouit';
-    rgbautoT(divtestin); // couleur aleatoire   
-    texte = '<h3>#' + fiche['name'] + '</h3>';
+    //rgbautoT(divtestin); // couleur aleatoire   
+    texte = '<h3 style="'+rgbauto()+'">#' + fiche['name'] + '</h3>';
     texte += '<p>Mess: ' + fiche['message']  + '</p>';
     texte += '<p>( ' + fiche['likes']  + ' Likes) [Ip: ' + fiche['ip']  + ']</p>';
+    texte += '<div class="addlike">+</div>';
+    texte += '<div class="addcomment">+</div>';
     divtestin.innerHTML = texte;
 
     var divtest = document.createElement("div");
@@ -163,18 +229,10 @@ function IncommingCreator(fiche,num) {
 
     var objTo = document.querySelector('#touittzone');
     objTo.insertBefore(divtest, objTo.childNodes[0]);
-
-    
-
-
     //return fiche['name'];
 }
-
-
-
-
 // ----------------------------------------------------------------
-function Get_Les_Fiches(url, para, success) {
+function GET_POST_FICHE_ALL(url, para, success) {
     let message = '';
     let message2 = '';
     var PAQUET = new XMLHttpRequest();
@@ -186,72 +244,20 @@ function Get_Les_Fiches(url, para, success) {
     };
     PAQUET.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     PAQUET.send("data=" + para);
+    
+    quialea();
+    document.getElementById('retourdebaton').innerHTML = "Salut !";
     return PAQUET;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-document.addEventListener( "DOMContentLoaded", addNewTouit() );
-var nbtouit = 0;
-var qui = "#Patobeur";
-// -----------------------------------------------------------------------------------
-function addNewTouit() {
-    // waiting for refresh json content
-    document.getElementById('retourdebaton').innerHTML = "ok";
-
-    var NewTouiit = document.querySelector("#newtouit");
-    NewTouiit.addEventListener("click", clikage);
-}
-
-function clikage() {
-    nbtouit++;
-    // var query = {one: null,two: null};
-    var divtest = document.createElement("div");
-    divtest.className = "fiche";
-    rgbautoT(divtest);
-    divtest.innerHTML = creatTouit(qui, fauxtext(hitdice(5, 25)), nbtouit, 'fichetouit', '');
-
-    var objTo = document.querySelector('#touittzone');
-    objTo.insertBefore(divtest, objTo.childNodes[0]);
-}
-
-// -----------------------------------------------------------------------------------
-function creatTouit(qui, message, nbtouit, classe, ide) {
-    //date et heure du touiite ??
-    if (ide != '') {
-        ide = ' id="' + ide + '"';
-    }
-    if (classe != '') {
-        classe = ' class="' + classe + '"';
-    }
-    document.getElementById('retourdebaton').innerHTML = nbtouit + " déjà touités";
-    return '<div' + ide + classe + '><h1>#' + nbtouit + "/" + qui + '</h1><p>' + message + '</p><p></p></div>';
-
-}
+// ----------------------------------------------------------------
 // -----------------------------------------------------------------------------------
 function fauxtext(nbword) {
     var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
     var phrase = '';
     for (i = 0; i < nbword; i++) {
-        nblettre = hitdice(2, 9);
+        nblettre = HitDice(2, 9);
         for (j = 0; j < nblettre; j++) {
-            phrase += alphabet[hitdice(0, 15)];
+            phrase += alphabet[HitDice(0, 15)];
         }
         phrase += " ";
     }
@@ -259,27 +265,35 @@ function fauxtext(nbword) {
     return phrase;
 }
 
-function hitdice(min, max) {
+function HitDice(min, max) {
     return Math.floor(Math.random(min) * Math.floor(max));
 }
 // -----------------------------------------------------------------------------------
 function rgbauto() {
-    return 'rgb(' + hitdice(0, 255) + ',' + hitdice(0, 255) + ',' + hitdice(0, 255) + ')';
+    let R = HitDice(0, 255);
+    let V = HitDice(0, 255);
+    let B = HitDice(0, 255);
+    let message = 'background-color:rgb(' + R + ',' + V + ',' + B + ')';
+    console.log(R + V + B);
+    if ((R + V + B) < 550) {
+        message += ";color:Black";
+    }
+    message += ')';
+    return message;
 }
 
 function rgbautoT(objet) {
-    let R = hitdice(0, 255);
-    let V = hitdice(0, 255);
-    let B = hitdice(0, 255);
+    let R = HitDice(0, 255);
+    let V = HitDice(0, 255);
+    let B = HitDice(0, 255);
     let Nuance = R + V + B;
     let couleur = 'rgba(' + R + ',' + V + ',' + B + ')';
     objet.style.backgroundColor = couleur;
-    if (R < 180 && V < 180 && B < 180) {
+    // if (R < 200 && V < 200 && B < 200) {
+    if (R + V + B < 550) {
         objet.style.color = "white";
     }
     let elementa = document.createElement('p');
     elementa.innerHTML = couleur;
     objet.appendChild(elementa);
 }
-
-LectureFiches();

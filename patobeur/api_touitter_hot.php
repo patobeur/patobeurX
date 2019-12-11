@@ -1,47 +1,25 @@
 <?php
-require_once('_Db_Class.php');
-require_once('_Db_User.php');
-    $message='';
-    $name='';
+    $ADDR ='vide';
 
-    if (isset($_POST['name'])){
-        $name='?name='. $_POST['name'];
+    // $FORW = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+        $ADDR = $_SERVER['HTTP_CLIENT_IP'];
+    } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        $ADDR = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    } else {
+        $ADDR = $_SERVER['REMOTE_ADDR'];
     }
-    if (isset($_POST['message'])){
-        $message='&message='. $_POST['message'];
+
+    require_once('_Db_Class.php');
+    require_once('_User_Class.php');
+
+    $Message ='';
+    $Name ='';
+    $Sender ='vide';
+
+    if (isset($_POST['name']) && isset($_POST['message'])){
+        $Name='name='. $_POST['name'];
+        $Message='&message='. $_POST['message'];
+        $Sender = '?'.$Name.$Message;
     }
-    if (isset($_GET['name'])){
-        $name='?name='. $_POST['name'];
-    }
-    if (isset($_GET['message'])){
-        $message='&message='. $_GET['message'];
-    }
-    
-    //$user_login = new USER();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    function getdatafromouterspace($url){
-        if ($data = file_get_contents($url)) {
-            return $data;
-        }
-    }
-    $retourtouitter = getdatafromouterspace($poster);
 ?>

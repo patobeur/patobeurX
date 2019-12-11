@@ -1,33 +1,33 @@
 var opacite_in = 1;
 var opacite_out = .6;
 var delaisaffichage = 3000;
-var idnomconsole = "console";
-var idnommessage = "message";
+var idnomconsole = "consoletool";
+var idnommessage = "messagetool";
 window.onload = function() {
     var laconsole = document.createElement("div");
-    var message = document.createElement("div");
+    var messagetool = document.createElement("div");
     var enhautde = '.5rem';
     var agauchede = '.5rem';
     var delaisaffichage = 3000;
     laconsole.id = idnomconsole;
-    message.id = idnommessage;
+    messagetool.id = idnommessage;
     laconsole.style = 'position: fixed;z-index:10000;opacity:.2;width: auto; bottom: ' + enhautde + '; left: ' + agauchede + '; margin: 0; padding: .5rem;background-color:rgba(0,0,0,.6);';
-    message.style = "color: white;  line-height: .5em; top: 0; left: 0; margin: 0;";
+    messagetool.style = "color: white;  line-height: .5em; top: 0; left: 0; margin: 0;";
     laconsole.style.outline = "1px solid rgba(255,255,255, .4)";
     document.body.appendChild(laconsole);
-    laconsole.appendChild(message);
+    laconsole.appendChild(messagetool);
     //------------------------------------------------------
     var visilibilitite = document.getElementById(idnomconsole);
     visilibilitite.addEventListener("mouseover", function(event) {
         event.target.style.opacity = opacite_in; // opacity à fond por y voir quelque chose !
-        message.style.lineHeight = "1em";
+        messagetool.style.lineHeight = "1em";
         refresh_affichage(1);
     }, false);
     //------------------------------------------------------
     visilibilitite.addEventListener("mouseout", function(event) {
         setTimeout(function() { // on remet l'opacité à presque rien pour ne pas gener l'affichage
             event.target.style.opacity = opacite_out;
-            message.style.lineHeight = "initial";
+            messagetool.style.lineHeight = "initial";
             refresh_affichage(0);
         }, delaisaffichage);
     }, false);
@@ -55,7 +55,7 @@ function refresh_affichage(choix) {
             numquivabien = i;
         }
     }
-    document.getElementById("console").style.backgroundColor = coolquivabien;
+    document.getElementById("consoletool").style.backgroundColor = coolquivabien;
     if (choix != 1) {
         tools_txt = '[' + format[numquivabien] + '] ' + screen_W + '/' + screen_H + 'px';
     } else {
@@ -67,5 +67,5 @@ function refresh_affichage(choix) {
         tools_txt = tools_txt + '[Tot_Rules] ' + alertes.length + ' <br/>';
         tools_txt = tools_txt + '[Actual_Color] ' + coolquivabien;
     }
-    document.getElementById("message").innerHTML = tools_txt;
+    document.getElementById("messagetool").innerHTML = tools_txt;
 }

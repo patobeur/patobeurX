@@ -1,6 +1,6 @@
 /* Définition des effets */
 .shadows {
-    box-shadow: 1px 2px 25px rgba(0, 0, 0, .3);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .3);
 }
 
 .touitter .touitters .navigation .menu {
@@ -12,51 +12,63 @@
 }
 .touitter .touitters .navigation{
     width: 100%;
+    padding: 5px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-    background-color: rgba(79, 67, 243, 0.473);
+    background-color: rgba(255, 255, 255, 0.473);
 }
+
+
 
 
 .touitter .touitters #touittzone {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    background-color: rgb(255, 255, 255);
+    padding:5px;
 }
 
 .touitter .touitters #touittzone .fiche {
     width: 100%;
     padding: .1rem;
-    border-radius: 7px;
-    height: 7rem;
+    /* height: 7rem; */
     overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.473);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .3);
+    padding:4px;
+    margin:2px;
+    outline:1px solid rgba(143, 143, 143, 0.521);
 }
 .touitter .touitters #touittzone .fiche:hover {
     height: auto;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.473);
 }
 @media (min-width:600px) {
-    .touitter .touitters #touittzone .fiche {max-width: 33%;}
+    .touitter .touitters #touittzone .fiche {max-width: calc( (100% - ( 3 * 4px ) ) / 3 );}
     /* .touitter {padding: 2%;} */
 }
 @media (min-width:1000px) {
-    .touitter .touitters #touittzone .fiche {max-width: 20%;}
+    .touitter .touitters #touittzone .fiche {max-width: calc( (100% - ( 3 * 4px ) ) / 3 );}
 }
 @media (min-width:1300px) {
-        .touitter .touitters #touittzone .fiche {width:calc(100% / 6)}
+        .touitter .touitters #touittzone .fiche {width:calc( (100% - ( 6 * 4px ) ) / 6 );}
 }
 .touitter .touitters #touittzone .fiche .fichetouit {
     background-color: rgba(255, 255, 255, 0.575);
-    border-radius: 7px;
     padding: .5rem;
     margin: .1rem;
 }
 .touitter .touitters #touittzone .fiche .fichetouit h3 {
+    border-radius: 7px;
     font-size: 1.2rem;
     padding: .5rem;
     margin: .1rem;
     outline: 1px solid black;
+    color: white;
 }
 .touitter .touitters #touittzone .fiche .fichetouit p {
     font-size: 1rem;
@@ -64,17 +76,34 @@
     margin: 0;
     outline: 0;
 }
-
-
 #consoleajax {
-    position: absolute;
-    top:120px;
-    right:5px;
+    display:none;
+    position: fixed;
+    top: 100px;
     width:max-content;
     background-color: #EAEAEA;
     margin: 0;
     margin: 1rem;
     border-radius: 7px;
+}
+
+.touitter .touitters #touittzone .fiche .fichetouit .addcomment {
+    width: max-content;
+    height: max-content;
+    padding: 0 .5rem;
+    margin: 2px;
+    background-color: rgb(60, 255, 0);
+    color:white;
+
+}
+.touitter .touitters #touittzone .fiche .fichetouit .addlike {
+    width: max-content;
+    height: max-content;
+    padding: 0 .5rem;
+    margin: 2px;
+    background-color: rgb(255, 81, 0);
+    color:white;
+
 }
 .joker2 {
     background-color: #EAEAEA;
@@ -87,6 +116,65 @@
 }
 .touitter .touitters .formulaire {
     width:100%;
-
-
 } 
+
+
+.formulaire {
+    display:flex;
+    /* flex-direction: row; */
+    /* flex-wrap: nowrap; */
+    align-items:stretch;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    width:100%;
+}
+
+.formulaire .posti {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    outline: 1px solid rgba(0, 0, 0, 0.473);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .3);
+    background-color: rgba(123, 255, 0, 0.315);
+    margin-right:5px;
+}
+.formulaire .posti .menu {
+    padding: 0 1rem;
+    background-color: rgba(0, 89, 255, 0.692);
+    outline: 1px solid #EAEAEA;
+    width:max-content;
+    border-radius: 8px;
+    margin: .2rem;
+    color: white;
+}
+.formulaire .consoli {
+    flex-direction: row;
+    display:flex;
+    padding: 5px;
+    outline: 1px solid rgba(0, 0, 0, 0.473);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .3);
+    background-color: rgba(255, 0, 0, 0.288);
+    margin-right:5px;
+}
+.formulaire .bouttoni {
+    padding: 5px;
+    outline: 1px solid rgba(0, 0, 0, 0.473);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .3);
+    background-color: rgba(0, 47, 255, 0.349);
+}
+.formulaire .bouttoni .menu {
+    padding: 0 1rem;
+    background-color: rgba(64, 92, 145, 0.692);
+    outline: 1px solid #EAEAEA;
+    width:max-content;
+    border-radius: 8px;
+    margin: .2rem;
+    color: white;
+}
+.formulaire .messagi {
+    padding: 5px;
+    outline: 1px solid rgba(0, 0, 0, 0.473);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .3);
+    background-color: rgba(255, 102, 0, 0.315);
+}

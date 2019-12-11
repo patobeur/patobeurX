@@ -8,13 +8,27 @@
                     </div>
                     
                     <div class="formulaire">
-                        <input id="pseudo" type="text" value="Pato'">
-                        <input id="message" type="textarea" value="From Outer Space">
-                        <button id="sandmessage" class="menu">Sand...</button>
-                        <input id="one" type="text" value="" placeholder="readyState reporting...">
-                        <input id="two" type="text" value="" placeholder="status reporting...">
-                        <input id="three" type="text" value="">
+                        <section class="posti">
+                            <input id="name" type="text" value="Patoulesjours">
+                            <textarea id="message" type="textarea">From Outer Space</textarea>
+                            <div id="sandmessage" class="menu">Sand...</div>
+                        </section>
+                        <section class="consoli">
+                            <div id="one">readyState reporting</div>
+                            <div id="two">status reporting...</div>
+                            <div id="three">joker...</div>
+                        </section>
+                        <section class="bouttoni">
+                                <div id="TONE" class="menu">ONE</div>
+                                <div id="TTWO" class="menu">TWO</div>
+                                <div id="TTHREE" class="menu">THREE</div>
+                        </section>
+                        <section class="messagi">
+                                <div class="mess">
+                                </div>
+                        </section>
                     </div>
+                    
                     
                     <div id="acteurs"></div>
                     <div id="retourdebaton"></div>
