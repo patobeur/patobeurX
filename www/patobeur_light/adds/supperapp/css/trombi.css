@@ -1,0 +1,130 @@
+/* trucssupers  */
+section.trombi {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin-left:auto;
+    margin-right:auto;
+    padding-top:2rem;
+  }
+  section.trombi .fiches {
+    width:90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: left;
+    align-items: center;
+  }
+  section.trombi .image{
+    width:250px;
+    height:250px;
+    background-color:var(--bg-rouge);
+    border-radius: 50%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+  }
+  section.trombi .fiches article.talign .image {
+      background-image: url('../img/avaone.jpg.png');
+  }
+  section.trombi .fiches article.marge .image {
+      background-image: url('../img/avatwo.jpg.png');
+  }
+  section.trombi .fiches article.isaac .image {
+      background-image: url('../img/avathree.jpg.png');
+  }
+  section.trombi .fiches article.hash .image {
+      background-image: url('../img/avafour.jpg.png');
+  }
+
+
+  
+  section.trombi .fiches article {
+    width: 100%;
+    min-width: 100px;
+    background-color: rgba(255, 255, 255, 0.753);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+  }
+
+  
+@media (min-width:576px) {
+    section.trombi .fiches article {
+      width: 50%;
+    }
+}
+  @media (min-width:860px) {
+    section.trombi .fiches article {
+      width: 50%;
+    }
+  }
+  @media (min-width:1200px) {
+    section.trombi .fiches article {
+      width: 25%;
+    }
+  }
+  @media (min-width:1338px) {
+    section.trombi .fiches article {
+      width: 25%;
+    }
+  }
+  @media (min-width:1500px) {
+    section.trombi .fiches article {
+      width: 25%;
+    }
+  }
+  
+/* SUPER BUTONS A BENOIST 
+C'est de la fauche j'avoue */
+
+section.trombi .fiches article .actions .btn > img {
+  margin-right: 0.5rem;
+  transition: .3s ease;
+  max-width: 50%;
+  display: block;
+
+}
+section.trombi .fiches article .actions .btn {
+  display: inline-flex;
+  width:max-content;
+  padding: .7rem;
+  max-width:max-content;
+  height:3rem;
+  text-decoration: none;
+  background-color:var(--bg-rouge);
+  color: #ffffff;
+  border-radius: 0.5rem; 
+  font-weight: 400; 
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+}
+section.trombi .fiches article .actions .btn > span{
+  margin-left: auto;
+  margin-right: auto;
+  white-space: nowrap;
+}
+section.trombi .fiches article .actions .btn:hover,
+section.trombi .fiches article .actions .btn:focus {
+    font-weight: 800;
+}
+section.trombi .fiches article .actions .btn:hover > img,
+section.trombi .fiches article .actions .btn:focus > img {
+    transform: scale(1.4);
+    transition: .3s cubic-bezier(0,0,0,5);
+}
+section.trombi .fiches article .actions .btn > img {
+  margin-right: 0.5rem;
+  transition: .3s ease;
+  max-width: 100%;
+  display: block;
+
+}

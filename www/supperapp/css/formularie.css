@@ -1,0 +1,125 @@
+/* trucssupers  */
+section.formularie {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin-left:auto;
+    margin-right:auto;
+    padding-top:2rem;
+    background-color:var(--bg-rouge);
+    padding-bottom: 2rem;
+  }
+  section.formularie .fiches {
+    width:95%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+  section.formularie .fiches div input{
+      width: 100%;
+  }
+  section.formularie .fiches div textarea{
+      width: calc(100% - 1rem);
+  }
+  .Tagtitre {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  section.formularie .fiches div label{
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: blanchedalmond;
+
+  }
+  .Tagtitre h3{
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: blanchedalmond;
+  }
+  .Tagname { 
+    display: flex;
+    flex-direction: column;
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .Tagmail {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .Tagcomment {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 / 3;
+    grid-row: 4;
+  }
+  .submition {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1 / 3;
+    grid-row: 5;
+    padding-top:10px;
+  }
+
+  .submition button{
+      background-color: #fff;
+      width: max-content;
+      font-size: 1.2rem;
+  }
+    @media (min-width:576px) {
+        section.formularie .fiches {
+            width: 80%;
+        }
+    }
+    @media (min-width:860px) {
+        section.formularie .fiches {
+            width:max-content;
+        }
+        section.formularie .fiches div textarea{
+            width: 100%;
+        }
+        section.formularie .fiches {
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 0;
+          /* grid-auto-rows: minmax(auto, auto); */
+      
+        }
+        .Tagtitre {
+          grid-column: 1 / 3;
+          grid-row: 1;
+        }
+        .Tagname { 
+          grid-column: 1;
+          grid-row: 2;
+        }
+        .Tagmail {
+          grid-column: 2;
+          grid-row: 2;
+        }
+        .Tagcomment {
+          grid-column: 1 / 3;
+          grid-row: 3;
+        }
+        .submition {
+            grid-column: 1 / 3;
+            grid-row: 4;
+            align-items: left;
+            justify-content: left;
+            text-align: right;
+        }
+    }
+    @media (min-width:1338px) {
+    }
+    @media (min-width:1500px) {
+    }

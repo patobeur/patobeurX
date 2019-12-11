@@ -1,0 +1,97 @@
+/* SURCHARGE NAVIGATION */
+.main-nav.navbar-light .navbar-nav .nav-link {
+    color: var(--bg-linknav);
+    font-size: 2rem;
+}
+.nav-item .dropdown-menu .dropdown-item{
+    font-size: 1.5em;
+}
+.nav-item .dropdown-menu .dropdown-item:hover{
+    font-size: 1.5em;
+    background-color: rgba(0, 0, 0, 0.664);
+    color: white;
+}
+.navbar-light .navbar-nav .active>.nav-link {
+    color: var(--bg-linknav);
+    font-weight: 800;
+}
+.navbar-light .navbar-toggler .navbar-toggler-icon {
+    color: white;
+}
+.navbar-light .navbar-toggler {
+    border-color: var(--bg-black);
+    background-color: var(--bg-toggler);
+}
+.navbar {
+    /* padding:0 1rem 1rem 1rem; */
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+}
+
+@media (max-height:700px) {
+    header {
+        position: fixed;
+        top: 0px;
+        left: 0;
+        right: 0;
+    }
+}
+
+.navbar-brand {
+    padding:0;
+    margin: 0;
+}
+/* ---------------------------- */
+.nospacing {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.container {
+    width: 100%;
+    padding-right: 0;   /*15px; */
+    padding-left: 0;    /* 15px; */
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 100%
+}
+/* @media (max-height:700px) {.fixed-top{position:relative;top:0;right:0;left:0;z-index:1030}} */
+
+
+
+@media (max-width:320px) {
+    .logo {
+        max-width: 100%
+    }
+    .navbar-brand {
+        padding:0;
+        margin: 0;
+        max-width: 160px
+    }
+    /* .navbar {
+        padding:0;
+        margin: 0;
+        max-width: 160px
+    } */
+  }
+  @media (max-width:576px) {
+    .langages .container .fiche figure {
+      display: none;
+    }
+    .langages .container .fiche {
+      display:flex;
+      justify-content: center;
+      align-content: center;
+      outline: 1px solid rgb(255, 255, 255);
+    }
+  }
+  
+  .patotop {
+      padding-top: 80px;
+      
+  }

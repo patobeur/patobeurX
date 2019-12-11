@@ -1,0 +1,121 @@
+
+/* COVER  */
+section.heroman {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('../img/about.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-color: none;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.795);
+}
+section.heroman .fiche .actions {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;  
+  margin-right: auto;  
+  padding-top: 2.4rem;  
+  max-width: 44rem;  
+  border-top: .1rem solid
+  #fff;
+  /* display:flex;
+  text-align: center;
+  border-top: .1rem solid #FFF;
+  padding-top: 2.4rem; */
+}
+section.heroman .fiche .actions .btn {
+  display: inline-flex;
+  /* text-align: center;
+  margin-bottom: 0; */
+  width:12rem;
+  padding: 1.4rem;
+  max-width:15rem;
+  height:5rem;
+  text-decoration: none;
+  background-color:#fff;
+  color: #2e2e2e;
+  border-radius: 0.5rem; 
+  font-weight: 300; 
+  font-size: 2rem;
+  line-height: 2rem;
+}
+section.heroman .fiche .actions .btn > span{
+  margin-left: auto;
+  margin-right: auto;
+  white-space: nowrap;
+}
+section.heroman .fiche .actions .btn:hover,
+section.heroman .fiche .actions .btn:focus {
+    font-weight: 800;
+    color: rgba(38, 212, 38, 0.877);
+}
+section.heroman .fiche .actions .btn:hover > img,
+section.heroman .fiche .actions .btn:focus > img {
+    transform: scale(1.4);
+    transition: .3s cubic-bezier(0,0,0,8);
+}
+section.heroman .fiche .actions .btn > img {
+  margin-right: 0.5rem;
+  transition: .3s ease;
+  max-width: 100%;
+  display: block;
+
+}
+/* END-COVER */
+
+section.heroman .fiche{
+  width: 94%;
+}
+section.heroman .fiche h1 {
+  text-transform: uppercase;
+  font-size: 4rem;
+  text-align: center;
+}
+section.heroman .fiche p {
+  text-align: center;
+  margin-bottom: 1.2rem;
+  font-size: 2rem;
+}
+@media (max-width:590px) {
+  section.heroman .fiche .actions .btn{       
+                                margin-bottom:4rem;}
+  section.heroman .fiche .actions {       
+                                flex-direction: column;
+                                width: 95%;}
+}
+@media (min-width:330px) {
+  section.heroman .fiche h1 {   font-size: 4.5rem;}
+  section.heroman .fiche p {    font-size: 1.3em;}
+  section.heroman {             padding: 0 2rem 0 2rem;}
+  section.heroman .fiche{       width: 95%;}
+}
+@media (min-width:490px) {
+  section.heroman {             padding: 0 2rem 0 2rem;}
+  section.heroman .fiche{       width: 80%;}
+}
+@media (min-width:576px) {
+  section.heroman {             padding: 0 2rem 0 2rem;}
+  section.heroman .fiche{       max-width: 90%;
+                                min-width: 80%;}
+  section.heroman .fiche h1 {   font-size: 5rem;}
+  section.heroman .fiche p {    font-size: 2em;}
+}
+@media (min-width:860px) {
+  section.heroman .fiche h1 {   font-size: 5em;}
+  section.heroman .fiche p {    font-size: 2em;}
+}
+@media (min-width:1338px) {
+  section.heroman .fiche h1 {   font-size: 5.5em;}
+  section.heroman .fiche p {    font-size: 2em;}
+}
+@media (min-width:1500px) {
+  section.heroman .fiche h1 {   font-size: 7em;}
+  section.heroman .fiche p {    font-size: 3em;}
+}

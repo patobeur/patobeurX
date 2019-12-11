@@ -1,0 +1,101 @@
+/* trucssupers  */
+section.trucssupers {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 2rem 0;
+  }
+  section.trucssupers .fiches {
+    width:90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: left;
+    align-items: center;
+  }
+  section.trucssupers .image{
+    width:100px;
+    height:100px;
+    background-color:var(--bg-rouge);
+    border-radius: 90px;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  section.trucssupers .fiches article.fork .image {
+      background-image: url('../img/fork-and-knife-silhouette.svg');
+  }
+  section.trucssupers .fiches article.bed .image {
+      background-image: url('../img/bed.svg');
+  }
+  section.trucssupers .fiches article.fire .image {
+      background-image: url('../img/fire-symbol.svg');
+  }
+  section.trucssupers .fiches article.leaf .image {
+      background-image: url('../img/plant-leaf-with-white-details.svg');
+  }
+  section.trucssupers .fiches article.umbrella .image {
+      background-image: url('../img/umbrella-black-silhouette.svg');
+  }
+  section.trucssupers .fiches article.dollar .image {
+      background-image: url('../img/dollar-symbol.svg');
+  }
+
+
+  
+  section.trucssupers .fiches article {
+    width: 100%;
+    min-width: 100px;
+    background-color: rgba(255, 255, 255, 0.753);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  section.trucssupers .fiches article H3 {
+    font-size: 2.5rem;
+  }
+  section.trucssupers .fiches article p {
+    font-size: 1.5rem;
+    width: 95%;
+  }
+
+  
+@media (min-width:576px) {
+    section.trucssupers .fiches article H3 {
+      font-size: 2.5rem;
+    }
+    section.trucssupers .fiches article p {
+      font-size: 1.5rem;
+      width: 85%;
+    }
+}
+  @media (min-width:860px) {
+    section.trucssupers .fiches article {
+      width: calc( 100% / 3 );
+    }
+    section.trucssupers .fiches article H3 {
+      font-size: 3rem;
+    }
+    section.trucssupers .fiches article p {
+      font-size: 2rem;
+    }
+  }
+  @media (min-width:1338px) {
+    section.trucssupers .fiches article {
+      width: calc( 100% / 3 );
+    }
+  }
+  @media (min-width:1500px) {
+    section.trucssupers .fiches article {
+      width: calc( 100% / 6 );
+    }
+  }
