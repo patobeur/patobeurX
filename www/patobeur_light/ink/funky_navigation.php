@@ -33,7 +33,7 @@
             // ici le lien active
             $target='';
             if ($Tablo_Enfants[$oo]['target']!='') $target=' target="'.$target.'"';
-            $A_remplacement .= OkSpacer(0,5).'<a class="dropdown-item" href="'.$Tablo_Enfants[$oo]['href'].'"'.$target.'>'.$Tablo_Enfants[$oo]['title'].'</a>'.$n;
+            $A_remplacement .= OkSpacer(0,5).'<a class="dropdown-item" target="_out" href="'.$Tablo_Enfants[$oo]['href'].'"'.$target.'>'.$Tablo_Enfants[$oo]['title'].'</a>'.$n;
         } 
         // ------------------------------------------------------------------------------
         $A_retour ='Vide';

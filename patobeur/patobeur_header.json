@@ -97,19 +97,24 @@
 		"actif": "true",
 		"files": [
 			{
+				"href": "adds/snowmount/",
+				"target": "_out",
+				"title": "SnowMount (Html/Css)"
+			},
+			{
 				"href": "adds/form-js-ajax-php/",
 				"target": "_out",
-				"title": "Elka Ajax"
+				"title": "Elka (Js/Ajax)"
 			},
 			{
 				"href": "adds/bladerunner/",
 				"target": "_out",
-				"title": "Bladerunner"
+				"title": "Bladerunner (Js)"
 			},
 			{
 				"href": "adds/superapp/",
 				"target": "_out",
-				"title": "SuperApp"
+				"title": "SuperApp (Html/Css)"
 			}
 		]
 	},
