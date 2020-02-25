@@ -45,7 +45,7 @@
 				"typeof": "title",
 				"nameof": "title",
 				"tag": "title",
-				"contentype": "Ma formation au Cefim à tours (2019-2020)"
+				"contentype": "CMS_POO"
 			},
 			{
 				"typeof": "name",
@@ -53,7 +53,7 @@
 				"tag": "meta",
 				"contentype": "description",
 				"item": "content",
-				"contentitem": "Exemple de technologie du web. Exemples proposés par Patobeur. Source sur Github"
+				"contentitem": "Exemple de technos sur le web."
 			},
 			{
 				"typeof": "name",
